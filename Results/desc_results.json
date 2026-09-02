@@ -1,0 +1,149 @@
+{
+  "per_model": {
+    "GPT-4.1-nano": {
+      "misinfo": 7132,
+      "not_misinfo": 258510,
+      "prevalence_pct": 2.68,
+      "se": 0.031,
+      "mean_conf": 73.4,
+      "std_conf": 23.5,
+      "n_errors": 10
+    },
+    "GPT-4.1": {
+      "misinfo": 10804,
+      "not_misinfo": 254839,
+      "prevalence_pct": 4.07,
+      "se": 0.038,
+      "mean_conf": 98.4,
+      "std_conf": 3.6,
+      "n_errors": 9
+    },
+    "Qwen2.5-7B": {
+      "misinfo": 11540,
+      "not_misinfo": 210948,
+      "prevalence_pct": 4.34,
+      "se": 0.04,
+      "mean_conf": 88.9,
+      "std_conf": 6.6,
+      "n_errors": 43164
+    },
+    "Nemotron-Nano-8B": {
+      "misinfo": 19559,
+      "not_misinfo": 245992,
+      "prevalence_pct": 7.36,
+      "se": 0.051,
+      "mean_conf": 94.4,
+      "std_conf": 8.9,
+      "n_errors": 101
+    },
+    "Phi-3.5-mini": {
+      "misinfo": 13797,
+      "not_misinfo": 251474,
+      "prevalence_pct": 5.19,
+      "se": 0.043,
+      "mean_conf": 94.8,
+      "std_conf": 2.6,
+      "n_errors": 381
+    }
+  },
+  "agreement": {
+    "0": {
+      "posts": 237355,
+      "share_pct": 89.35
+    },
+    "1": {
+      "posts": 12733,
+      "share_pct": 4.79
+    },
+    "2": {
+      "posts": 5740,
+      "share_pct": 2.16
+    },
+    "3": {
+      "posts": 3864,
+      "share_pct": 1.45
+    },
+    "4": {
+      "posts": 2773,
+      "share_pct": 1.04
+    },
+    "5": {
+      "posts": 3187,
+      "share_pct": 1.2
+    }
+  },
+  "kl_summary": {
+    "full": {
+      "kl_raw": {
+        "N": 5148,
+        "mean": 0.188,
+        "std": 0.36,
+        "min": 0.019,
+        "p25": 0.071,
+        "median": 0.113,
+        "p75": 0.169,
+        "max": 7.711
+      },
+      "kl_weighted": {
+        "N": 5148,
+        "mean": 0.487,
+        "std": 0.718,
+        "min": 0.049,
+        "p25": 0.154,
+        "median": 0.196,
+        "p75": 0.457,
+        "max": 7.603
+      },
+      "n_posts": {
+        "N": 5148,
+        "mean": 51.603,
+        "std": 45.907,
+        "min": 1.0,
+        "p25": 14.0,
+        "median": 41.0,
+        "p75": 76.0,
+        "max": 426.0
+      },
+      "misinfo_prevalence": {
+        "N": 5148,
+        "mean": 0.043,
+        "std": 0.071,
+        "min": 0.0,
+        "p25": 0.0,
+        "median": 0.025,
+        "p75": 0.056,
+        "max": 1.0
+      }
+    },
+    "clean": {
+      "kl_raw": {
+        "N": 4714,
+        "mean": 0.154,
+        "std": 0.159,
+        "min": 0.019,
+        "p25": 0.069,
+        "median": 0.113,
+        "p75": 0.168,
+        "max": 2.283
+      },
+      "kl_weighted": {
+        "N": 4714,
+        "mean": 0.466,
+        "std": 0.653,
+        "min": 0.049,
+        "p25": 0.149,
+        "median": 0.196,
+        "p75": 0.463,
+        "max": 5.596
+      }
+    },
+    "n_days": 5148,
+    "n_lowcount": 434,
+    "date_min": "2009-12-03",
+    "date_max": "2025-10-13",
+    "pearson_raw_wt": 0.5,
+    "pearson_p": 2e-323,
+    "ac1_raw": 0.204,
+    "ac1_wt": 0.06
+  }
+}

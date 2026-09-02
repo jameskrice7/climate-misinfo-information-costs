@@ -1,0 +1,8 @@
+# Pinned environment for Code/main_analysis.py
+# pyfixest is pinned deliberately: fixed-effect estimation details changed
+# across releases and the paper's numbers correspond to this version.
+pandas>=2.0
+numpy>=1.24
+pyarrow>=14.0
+pyfixest==0.40.1
+scipy>=1.10

@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use these replication materials, please cite the paper."
+title: >-
+  Replication materials — The Information Costs of Climate Misinformation:
+  Evidence from Global Financial Data
+abstract: >-
+  Replication code and derived data for a study of whether daily variation in
+  the distributional character of climate misinformation moves firm-level
+  information costs. Misinformation is measured as the KL divergence of the
+  day's misinformation-score distribution from a stable background
+  distribution, built from a five-model LLM ensemble over ~265,000 classified
+  climate posts, and merged onto a 19.2 million row global firm-day panel.
+authors:
+  - family-names: Rice
+    given-names: James K.
+    affiliation: University of Essex
+version: "1.0.0"
+date-released: "2026-09-02"
+license: MIT
+keywords:
+  - climate misinformation
+  - information costs
+  - market microstructure
+  - asset pricing
+  - KL divergence
+  - large language models
+  - replication package

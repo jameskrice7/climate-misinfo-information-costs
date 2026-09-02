@@ -1,0 +1,126 @@
+{
+  "source_file": "PAPER_2_PANEL.parquet",
+  "total_rows": 19183738,
+  "num_parts": 19,
+  "total_bytes": 1597897616,
+  "compression": "zstd level 19",
+  "verified_lossless": true,
+  "source_sha256_note": "Each part was compared against its source row group with pyarrow Table.equals (logical value comparison) at creation time; all 19 parts matched exactly. Use rebuild_panel.py --verify to confirm the parts you have are byte-identical to the ones published here.",
+  "arrow_schema": "RIC: string\nDate: date32[day]\nPrice Open: double\nPrice High: double\nPrice Low: double\nPrice Close: double\nVolume: double\nTurnover: double\nCompany Market Cap: double\nDividend yield: double\nRegion: string\ncpi_inflation: double\ngdp_growth: double\nunemployment: double\nExchange Code: string\nTRBC Industry Name: string\nCountry of Headquarters: string\nInstrument Type: string\nCompany Common Name: string\nOpen_trade: double\nHigh_trade: double\nLow_trade: double\nClose_trade: double\nBID: double\nASK: double\nVWAP: double\nNUM_MOVES: double\nMidPrice: double\nBidAskSpread: double\nSpreadPercent: double\nOrderFlow: double\nBuyerInitiated: double\nSellerInitiated: double\nTradeIntensity: double\nIntradayVolatility: double\nPriceImpact: double\nTotalReturn: double\nReturn1M: double\nReturn3M: double\nDailyReturn: double\nExcessReturn: double\nCAPM_Beta: double\nCAPM_Beta_nobs: uint32\nFF_Region: string\nFF_MktRF: double\nFF_SMB: double\nFF_HML: double\nFF_RMW: double\nFF_CMA: double\nFF_RF: double\nkl_raw: double\nkl_weighted: double\nn_posts: double\nmisinfo_count: double\nmisinfo_prevalence: double\nmean_ensemble_score: double\ntotal_engagement: double\nmean_engagement: double\nlow_count_flag: double\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 7304",
+  "parts": [
+    {
+      "part": "PAPER_2_PANEL.part000.parquet",
+      "rows": 1048576,
+      "bytes": 84259408,
+      "sha256": "f9b533405b15bc0824f1ca5b0c7356afead6b1fa639af015b859cc0b1ad4fcc2"
+    },
+    {
+      "part": "PAPER_2_PANEL.part001.parquet",
+      "rows": 1048576,
+      "bytes": 89027701,
+      "sha256": "c6e283946b05607a1d7ed5604a59d097c0add2400a9361b14e250abd04c1d408"
+    },
+    {
+      "part": "PAPER_2_PANEL.part002.parquet",
+      "rows": 1048576,
+      "bytes": 83189575,
+      "sha256": "29d33624fc9056098b16d40d6f48f00019b515b2e072d94c428ac9905f155d05"
+    },
+    {
+      "part": "PAPER_2_PANEL.part003.parquet",
+      "rows": 1048576,
+      "bytes": 88239018,
+      "sha256": "8f4f85d48c272d77d04eea85f70d91d42c6cac88b904fa3812857380e339e2a0"
+    },
+    {
+      "part": "PAPER_2_PANEL.part004.parquet",
+      "rows": 1048576,
+      "bytes": 88377717,
+      "sha256": "fb6df1fbf4c0dcc963a896634ce5bcc0fde4279246b855af22617545ad8b9218"
+    },
+    {
+      "part": "PAPER_2_PANEL.part005.parquet",
+      "rows": 1048576,
+      "bytes": 88724973,
+      "sha256": "4625b43ace9fae510cc7807c7db60e9c7137cd269ed9c8526f9b682a0184329d"
+    },
+    {
+      "part": "PAPER_2_PANEL.part006.parquet",
+      "rows": 1048576,
+      "bytes": 83939913,
+      "sha256": "d392d0057957af584809171cdf3d762f9e2ed792c2b7fed15b8ac549153d815b"
+    },
+    {
+      "part": "PAPER_2_PANEL.part007.parquet",
+      "rows": 1048576,
+      "bytes": 86352886,
+      "sha256": "c9e6e420f77e14c69bee3c1bd0fef0974f6165db51796a4c02d9d1df1439d82b"
+    },
+    {
+      "part": "PAPER_2_PANEL.part008.parquet",
+      "rows": 1048576,
+      "bytes": 88184693,
+      "sha256": "b41e5cbcecb2de967f0616da085c108949562fcf5ccc81eaa3e6b30a6ed1a586"
+    },
+    {
+      "part": "PAPER_2_PANEL.part009.parquet",
+      "rows": 1048576,
+      "bytes": 90956918,
+      "sha256": "bbd55e0088669f902b8fd5af1f558a9465fe819c3273c99518466b0dc2316964"
+    },
+    {
+      "part": "PAPER_2_PANEL.part010.parquet",
+      "rows": 1048576,
+      "bytes": 89443860,
+      "sha256": "cf4f115bb2c64daf2c8636b8fdc8d3484365596f87fa79f443c54755285721b5"
+    },
+    {
+      "part": "PAPER_2_PANEL.part011.parquet",
+      "rows": 1048576,
+      "bytes": 88684416,
+      "sha256": "13bdcc709f9445a0ddf2ec6b1382aee43325345abacbdc959a14295ec380b4a8"
+    },
+    {
+      "part": "PAPER_2_PANEL.part012.parquet",
+      "rows": 1048576,
+      "bytes": 83864476,
+      "sha256": "559b34dc33d207cebe02235b80cb3bac3d479055362ec0157b56ed9f89a74009"
+    },
+    {
+      "part": "PAPER_2_PANEL.part013.parquet",
+      "rows": 1048576,
+      "bytes": 88490508,
+      "sha256": "5bb72a9336dac7f455820c8916dca0127cbfb5a26b91658ec00ce95353c1c38f"
+    },
+    {
+      "part": "PAPER_2_PANEL.part014.parquet",
+      "rows": 1048576,
+      "bytes": 82608125,
+      "sha256": "9cdabcfaaa099acd015c890fde7e0311c1d5d1014c328584ebaae86947496023"
+    },
+    {
+      "part": "PAPER_2_PANEL.part015.parquet",
+      "rows": 1048576,
+      "bytes": 86980423,
+      "sha256": "f85c98e1daa2c5600b4500930d0f5ec2c0cfe82939918dc43ccfecdd3850dc1c"
+    },
+    {
+      "part": "PAPER_2_PANEL.part016.parquet",
+      "rows": 1048576,
+      "bytes": 87588484,
+      "sha256": "8cbd5bfbcc83df55adeb535a4f15f851ee34eae0837a2d72928edb42269d9267"
+    },
+    {
+      "part": "PAPER_2_PANEL.part017.parquet",
+      "rows": 1048576,
+      "bytes": 88597491,
+      "sha256": "18e33f497a775f04b8ba95bfef00e1dfcfc4622d89641a1e4b358f864f44e9ca"
+    },
+    {
+      "part": "PAPER_2_PANEL.part018.parquet",
+      "rows": 309370,
+      "bytes": 30387031,
+      "sha256": "8a02225ca969af2363a67616da060e1b64e274748bc8fc3f90d71fd6c68426f6"
+    }
+  ]
+}

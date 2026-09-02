@@ -1,0 +1,65 @@
+Loading panel ...
+  panel (19183738, 37); kl_raw non-null 98.3%
+
+=== CORE FULL READOUTS ===
+  pin  kl_raw       coef=-0.000620 se=0.000920 p=0.5004 N=12,678,294 R2=0.601
+  pin  kl_weighted  coef=-0.000693 se=0.000243 p=0.0043 N=12,678,294 R2=0.601
+  capm kl_raw       coef=+0.000132 se=0.000177 p=0.4568 N=10,650,961 R2=0.644
+  capm kl_weighted  coef=+0.000803 se=0.000048 p=0.0000 N=10,650,961 R2=0.644
+  ff   kl_raw       coef=+0.128312 se=0.003756 p=0.0000 N=10,624,691 R2=0.064
+  ff   kl_weighted  coef=+0.024714 se=0.001010 p=0.0000 N=10,624,691 R2=0.064
+
+=== STD EFFECTS ===
+  kl_raw_z {'coef': -0.0001513361545262927, 'se': 0.0001509451130486648, 'p': 0.3161041336911963}
+
+=== REGION SPLITS ===
+  English (US+UK): raw=-0.002028(p=0.731) wt=+0.000728(p=0.414) N=4,044,209
+  Non-English (CN+JP): raw=-0.001009(p=0.108) wt=-0.000367(p=0.001) N=8,367,496
+  EU: raw=+0.002384(p=0.033) wt=+0.000058(p=0.745) N=266,589
+
+=== PLACEBO ===
+  placebo {'coef': -0.0007862873306626045, 'se': 0.0027652465659563467, 'p': 0.7762150862030253, 'N': 1953653, 'r2': 0.648270598012815, 'r2_within': 0.1487744256467085} {'coef': -0.0011138656827340658, 'se': 0.000492845548735585, 'p': 0.024071905765428614, 'N': 1953653, 'r2': 0.6482713517899319, 'r2_within': 0.1487762498739572}
+
+=== SUBPERIOD / LOW-COUNT ===
+/home/jameskrice/Downloads/Paper 2/.venv/lib/python3.12/site-packages/pyfixest/estimation/model_matrix_fixest_.py:215: UserWarning: 2 singleton fixed effect(s) detected. These observations are dropped from the model.
+  warnings.warn(
+  2012-2018: wt=-0.000452 p=0.0804
+  2019-2025: wt=-0.001478 p=0.0000
+/home/jameskrice/Downloads/Paper 2/.venv/lib/python3.12/site-packages/pyfixest/estimation/model_matrix_fixest_.py:215: UserWarning: 2 singleton fixed effect(s) detected. These observations are dropped from the model.
+  warnings.warn(
+/home/jameskrice/Downloads/Paper 2/.venv/lib/python3.12/site-packages/pyfixest/estimation/model_matrix_fixest_.py:215: UserWarning: 2 singleton fixed effect(s) detected. These observations are dropped from the model.
+  warnings.warn(
+
+=== ASIA LAG ===
+  asia {'N': 6736336, 'contemporaneous': {'coef': -0.00014927809199335814, 'se': 0.00012411814602245947, 'p': 0.2291711836787791}, 'previous_day': {'coef': -0.000677978557444459, 'se': 0.00012676175332552024, 'p': 9.44813216552376e-08}}
+
+=== TWO-WAY CLUSTERED (raw + weighted) ===
+  kl_weighted: I=-0.00073(p=0.191) II=+0.00080 III=+0.02483
+  kl_raw: I=-0.00109(p=0.599) II=+0.00022 III=+0.12559
+  [2way] EN: Spread=0.0006749593878311327 FF=-0.0059459405594068405
+  [2way] Asia: Spread=-0.00039159309429898217 FF=0.03825321491584951
+  [2way] EU: Spread=4.63396200376126e-05 FF=0.02396990051605232
+  [2way] placebo: Spread=-0.0010629318975483423 FF=0.03108185805837479
+  [2way] climate_only: Spread=-0.0017425097110826144 FF=0.013152440577729584
+  [2way] EN_climate: Spread=0.00017101475913877377 FF=-0.0176229238045292
+
+=== TRIPLE INTERACTION ===
+  triple done
+
+=== ENERGY READOUTS + SIGN-FLIP ===
+  energy pin  kl_raw       coef=-0.000024 p=0.9971 N=468,062
+  energy pin  kl_weighted  coef=-0.001421 p=0.3446 N=468,062
+  energy capm kl_raw       coef=-0.001265 p=0.1159 N=384,017
+  energy capm kl_weighted  coef=+0.000856 p=0.0009 N=384,017
+  energy ff   kl_raw       coef=+0.195256 p=0.0000 N=382,890
+  energy ff   kl_weighted  coef=+0.014169 p=0.0159 N=382,890
+  signflip Renewable: +0.05047 (p=0.1508, N=56,678)
+  signflip Fossil: +0.00777 (p=0.7047, N=326,212)
+  signflip US: -0.01970 (p=0.3301, N=157,825)
+  signflip CN: +0.04314 (p=0.2286, N=176,846)
+/home/jameskrice/Downloads/Paper 2/.venv/lib/python3.12/site-packages/pyfixest/estimation/model_matrix_fixest_.py:215: UserWarning: 1 singleton fixed effect(s) detected. These observations are dropped from the model.
+  warnings.warn(
+  signflip Pre_2019: +0.04407 (p=0.0539, N=164,802)
+  signflip Post_2019: -0.05725 (p=0.1657, N=218,088)
+
+ALL DONE in 19.2 min -> /home/jameskrice/Downloads/Paper 2/revision_2026_05_5models/econ_results.json
