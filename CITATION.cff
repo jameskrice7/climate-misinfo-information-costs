@@ -4,24 +4,23 @@ title: >-
   Replication materials — The Information Costs of Climate Misinformation:
   Evidence from Global Financial Data
 abstract: >-
-  Replication code and derived data for a study of whether daily variation in
-  the distributional character of climate misinformation moves firm-level
-  information costs. Misinformation is measured as the KL divergence of the
-  day's misinformation-score distribution from a stable background
-  distribution, built from a five-model LLM ensemble over ~265,000 classified
-  climate posts, and merged onto a 19.2 million row global firm-day panel.
+  Replication code and derived data for a study of whether firm-day exposure
+  to sector-specific climate misinformation moves the trading costs of 204
+  listed climate-transition firms (2012-2025). Exposure is built from
+  1,959,707 judgments by Qwen3.6-35B-A3B-FP8, which scored 217,954 Facebook
+  climate posts for relevance to each of nine TRBC energy sub-industries and
+  for climate-or-energy misinformation.
 authors:
   - family-names: Rice
     given-names: James K.
     affiliation: University of Essex
-version: "1.0.0"
-date-released: "2026-09-02"
+version: "2.0.0"
+date-released: "2026-09-30"
 license: MIT
 keywords:
   - climate misinformation
-  - information costs
+  - information asymmetry
   - market microstructure
-  - asset pricing
-  - KL divergence
+  - bid-ask spread
   - large language models
   - replication package

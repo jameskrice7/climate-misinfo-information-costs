@@ -1,150 +1,170 @@
-# The Information Costs of Climate Misinformation
+# The Information Costs of Climate Misinformation — Replication Package
 
-Replication materials for *"The Information Costs of Climate Misinformation:
-Evidence from Global Financial Data"* (James K. Rice, University of Essex).
+**Paper:** James Rice, *The Information Costs of Climate Misinformation: Evidence
+from Global Financial Data*, Department of Government, University of Essex
+(September 2026). The paper is in [`paper/`](paper/).
 
-The paper asks whether daily variation in the **distributional character** of
-climate misinformation moves firm-level information costs. Misinformation is
-measured not by prevalence but by a **KL divergence** of the day's
-misinformation-score distribution from a stable background distribution,
-constructed from a five-model LLM ensemble. That index is merged onto a global
-firm-day panel and used as the regressor of interest.
+The paper asks whether firm-day exposure to sector-specific climate
+misinformation moves the trading costs of 204 listed climate-transition firms
+(2012–2025, 726,890 firm-days). Exposure is measured by a single open-weight
+LLM, **Qwen3.6-35B-A3B-FP8**, which scored each of 217,954 English-language
+Facebook climate posts against each of the nine TRBC energy sub-industries in
+the panel (1,959,707 post × sub-industry judgments).
 
-## Repository layout
+This version replaces the earlier five-model-ensemble package, which used a
+market-wide daily KL-divergence index on a 19.2M-row global panel. That
+package remains in this repository's git history.
+
+---
+
+## Contents
 
 ```
-Code/
-  main_analysis.py        THE main-analysis script. Reproduces every headline
-                          regression from the panel + the KL index, writing all
-                          numbers to output/main_results/econ_results.json.
-  build_kl_index.py       Rebuilds the daily KL index from per-post ensemble
-                          classifications (needs the raw post-level file, which
-                          is not distributed — see "What is not included").
-  refresh_panel.py        Refreshes all daily-derived panel columns from the
-                          daily measure and carves out the energy subsample.
-
-Data/
-  panel_parts/            PAPER_2_PANEL.parquet, split into 95 MB parts.
-                          Run rebuild_panel.py before analysis. See below.
-  rebuild_panel.py        Reassembles the full panel from panel_parts/.
-  PAPER_2_PANEL_energy.parquet          Energy-exposed subsample (81.8 MB).
-  daily_misinfo_kl_measure_5models.parquet
-                          The daily KL index itself (5,148 days).
-
-Results/
-  econ_results.json       All headline regression output.
-  desc_results.json       Ensemble descriptives, model agreement, KL summary.
-  dk_results.json         Driscoll–Kraay standard errors.
-  energy_dl.json          Energy-subsample distributed-lag results.
-  extras.json             Amihud illiquidity, shock days, event study.
-  attention.json          Attention-quintile splits.
-  std_effects_fullstd.json  Fully standardized effects.
-  01_econometrics.log     Console log of the original run.
-  *.png                   Figures.
+paper/
+  Rice_2026_Information_Costs_of_Climate_Misinformation.pdf   the paper
+data/
+  PAPER_2_PANEL_energy.parquet    firm-day panel: 204 firms, 726,890 rows x 59 columns
+pipeline/                         the classification pipeline (run from this folder)
+  prompts_industry.py             the rubric: system prompt + JSON schema
+  classify_industry.py            async client: one judgment per (post, sub-industry)
+  serve_vllm.sh, launch_vllm.py   the vLLM server (Qwen3.6-35B-A3B-FP8, temperature 0)
+  launch_classifier.py, watchdog.py, monitor.py   daemons for the ~10-day run
+  retry_errors.py                 re-asks pairs whose JSON failed to parse
+  normalize_energy.py             builds work/ from the post x panel file
+  expand.py                       (post, sub-industry) scores -> (firm, post) rows
+  aggregate_firmday.py            (firm, post) rows -> the firm-day exposure index
+  CLASSIFICATION_NOTES.md         design notes written during the run
+  work/
+    firmday_misinfo.parquet       THE FIRM-DAY EXPOSURE INDEX (714,227 firm-days)
+    post_industry_pairs.parquet   the 1,959,707 (post, sub-industry) pairs judged
+    firms.parquet                 the 204 firms: RIC, name, sub-industry, country, region
+    industry_profile.parquet      the nine sub-industry profiles shown to the model
+  out/post_industry/              POST-LEVEL CLASSIFICATIONS, 980 shards
+  logs/                           classifier, expansion and watchdog logs of the run
+analysis/
+  analysis_energy_v2.py           Models I-III and every robustness block
+  full_readouts_v2.py             full coefficient readouts and the price-impact test
+  build_tables_figures.py         LaTeX tables and figures from the results JSON
+results/                          the outputs reported in the paper
+  tables/*.tex, figures/*.png, full_readouts_v2.json, analysis_v2.log
 ```
 
-## The panel is stored in parts
+## Reproducing the analysis
 
-`PAPER_2_PANEL.parquet` is **2,177 MB** — 19,183,738 firm-day rows × 59
-columns. That exceeds GitHub's 100 MB per-file limit, and also Git LFS's 2 GB
-per-file limit, so it cannot be stored here as a single file. It is split into
-`Data/panel_parts/` as parquet parts of at most 95 MB each, one per source row
-group, plus a `manifest.json`.
-
-Reassemble it before running the analysis:
+Requirements: Python 3.12 and the pinned packages in `requirements.txt`. The
+two-way clustered standard errors depend on `pyfixest==0.40.1`.
 
 ```bash
-python Data/rebuild_panel.py            # -> Data/PAPER_2_PANEL.parquet
-python Data/rebuild_panel.py --verify   # slower; also checks part checksums
-```
-
-Needs ~2.2 GB of free disk. The reassembled panel has the same row order and
-the same values as the original; only the compression codec differs (zstd in
-the parts, Snappy in the original), which changes the bytes on disk but not the
-data. Each part was compared against its source row group with pyarrow's
-`Table.equals` when the split was made, and all 19 matched exactly. `--verify`
-checks each part's SHA-256 against `manifest.json`, confirming your copy is
-byte-identical to what was published here.
-
-## How to replicate
-
-```bash
-python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
-python Data/rebuild_panel.py
-python Code/main_analysis.py
+python analysis/analysis_energy_v2.py     # -> results/econ_results_v2.json   (~2 min)
+python analysis/full_readouts_v2.py       # -> results/full_readouts_v2.json + full readout tables
+python analysis/build_tables_figures.py   # -> results/tables/*.tex, results/figures/*.png
 ```
 
-`main_analysis.py` expects the panel at `Data/PAPER_2_PANEL.parquet` and writes
-to `output/main_results/econ_results.json`. Requires Python ≥ 3.10, pandas,
-numpy, and `pyfixest==0.40.1` (the pinned version matters — fixed-effect
-estimation details changed across releases).
+Run them from anywhere; paths resolve relative to the repository. Each script
+merges `pipeline/work/firmday_misinfo.parquet` onto
+`data/PAPER_2_PANEL_energy.parquet` by `(RIC, Date)`. Firm-days with no
+matched post get zero exposure.
 
-## The KL index
+| Paper | File in `results/` | Script |
+|---|---|---|
+| Table 1, headline coefficients | `tables/tab_v2_core.tex` | `analysis_energy_v2.py` → `build_tables_figures.py` |
+| Table 2, Model I full readout | `tables/tab_v2_full_modelI.tex` | `full_readouts_v2.py` |
+| Table 3, price impact (joint test of H1) | `tables/tab_v2_priceimpact.tex` | `full_readouts_v2.py` |
+| Table 4, one-day lag | `tables/tab_v2_lag.tex` | `analysis_energy_v2.py` → `build_tables_figures.py` |
+| Table 5, placebo (sector-irrelevant posts) | `tables/tab_v2_placebo.tex` | `analysis_energy_v2.py` → `build_tables_figures.py` (see below) |
+| Table 6, subperiods | `tables/tab_v2_subperiod.tex` | `analysis_energy_v2.py` → `build_tables_figures.py` |
+| Tables 7–8, Models II–III full readouts | `tables/tab_v2_full_modelII.tex`, `tab_v2_full_modelIII.tex` | `full_readouts_v2.py` |
+| Table 25, exposure-index descriptives | `tables/tab_v2_descriptive.tex` | `analysis_energy_v2.py` → `build_tables_figures.py` |
+| Table 26 / Figure 8, heterogeneity | `tables/tab_v2_signflip.tex`, `figures/fig_v2_signflip_coef.png` | `analysis_energy_v2.py` → `build_tables_figures.py` |
+| Table 27, triple interaction | `tables/tab_v2_triple.tex` | `analysis_energy_v2.py` → `build_tables_figures.py` |
+| Figure 7, exposure distribution | `figures/fig_v2_iv_distribution.png` | `build_tables_figures.py` |
+| Supplementary: new index vs. old KL index | `tables/tab_v2_compare_kl.tex`, `figures/fig_v2_new_vs_old.png` | `analysis_energy_v2.py` → `build_tables_figures.py` |
 
-The index is built from ~265,000 classified climate-related social media posts.
-Each post is scored by five models, and the per-post ensemble score is the
-confidence-weighted mean over the models that returned a valid label:
+`results/econ_results_v2.json` is not shipped; the first script regenerates it.
+The descriptive appendix tables on the financial panel (Tables 9–18) and on
+the post corpus (Tables 19–24, Figures 3–5) come from the author's earlier
+data-assembly code and the Meta Content Library records, and are not
+regenerated here. Their figures are included in `results/` for reference.
 
-| Model | Misinfo prevalence | Mean confidence | Invalid labels |
-|---|---|---|---|
-| GPT-4.1-nano | 2.68% | 73.4 | 10 |
-| GPT-4.1 | 4.07% | 98.4 | 9 |
-| Qwen2.5-7B | 4.34% | 88.9 | 43,164 |
-| Nemotron-Nano-8B | 7.36% | 94.4 | 101 |
-| Phi-3.5-mini | 5.19% | 94.8 | 381 |
+**The placebo (Table 5) needs data that cannot be redistributed.** It
+re-aggregates post-level scores by calendar date, which requires the post
+creation dates in `pipeline/work/posts.parquet`. That file holds Meta Content
+Library post text. Without it, `analysis_energy_v2.py` skips the placebo
+block, says so, and leaves the shipped `tab_v2_placebo.tex` in place. With MCL
+access, rebuild `work/posts.parquet` with `pipeline/normalize_energy.py`,
+then run `pipeline/expand.py` before the analysis.
 
-Invalid or garbled labels are treated as **missing for that model on that
-post**, not as "not misinformation" — so error-heavy days are not artificially
-pushed toward zero and the daily series stays continuous with no gaps. This
-matters most for Qwen2.5-7B, which failed to return a parseable label on ~16%
-of posts.
+## The exposure index
 
-Daily scores are histogrammed into B = 20 bins over [0, 1] and compared against
-a pooled background distribution P by KL divergence, with Laplace smoothing
-(ε = 1e-10) for empty bins. Two variants are produced:
+`pipeline/work/firmday_misinfo.parquet` has one row per (firm, trading day)
+with at least one paired post:
 
-- `kl_raw` — every post contributes equally.
-- `kl_weighted` — posts weighted by engagement (likes + shares + comments +
-  reactions + 1).
+| Column | Meaning |
+|---|---|
+| `RIC`, `Date` | firm and calendar date |
+| `fd_n_posts` | climate posts paired with the firm that day |
+| `fd_mean_exposure` | **Exp^mean**, the headline regressor: mean of per-post exposure |
+| `fd_sum_exposure` | Exp^sum; the paper uses log(1 + Exp^sum) |
+| `fd_mean_misinformation` | M^mean, the mean misinformation sub-score |
+| `fd_mean_relevance` | R^mean, the mean sector-relevance sub-score |
+| `fd_max_exposure` | the day's highest per-post exposure |
+| `fd_share_misinfo` | share of posts with misinformation ≥ 25 |
 
-Coverage is 5,148 days, 2009-12-03 to 2025-10-13; 434 days are flagged
-`low_count_flag`. Summary: `kl_raw` mean 0.188 (median 0.113),
-`kl_weighted` mean 0.487 (median 0.196); the two correlate at ρ = 0.50.
+Per-post exposure is `relevance × misinformation / 100` on a 0–100 scale. It
+is non-zero only for a post that is both relevant to the firm's sub-industry
+and contains climate-or-energy misinformation. Firms in the same sub-industry
+share a value on a given day; firms in different sub-industries do not.
 
-## Specifications reproduced
+## The classifier
 
-`main_analysis.py` runs the full set: core full-panel readouts (Model I
-bid-ask spread, Model II CAPM beta, Model III Fama-French 5-factor excess
-return); standardized effects; region splits (English US+UK / non-English
-CN+JP / EU); placebo; Asia-lag (contemporaneous vs. previous day); subperiod
-(2012-2018 vs. 2019-2025); low-count exclusions; true two-way (firm + date)
-clustered variants of the core, region, climate and triple-interaction
-specifications; and energy-subsample readouts with a sign-flip decomposition by
-type, region and period. The main regressions run on N = 12,678,294 firm-days.
+- **Model:** `Qwen/Qwen3.6-35B-A3B-FP8`, Hugging Face revision
+  `95a723d08a9490559dae23d0cff1d9466213d989`: 35B-parameter mixture of
+  experts with about 3B active parameters.
+- **Serving:** vLLM 0.21 on one NVIDIA GB10 (DGX Spark), FP8 weights with the
+  Triton MoE backend (`pipeline/serve_vllm.sh`).
+- **Decoding:** temperature 0 with xgrammar-enforced JSON, so every judgment
+  is deterministic and schema-valid.
+- **Rubric:** `pipeline/prompts_industry.py`. Each judgment sees the
+  sub-industry profile (name, countries and regions of its firms, example
+  firms) and one post (text, date, content type, link caption and
+  description). It returns relevance (0–100), misinformation (0–100),
+  `misinfo_type` and a one-sentence rationale.
+- **Scope:** misinformation is limited to climate and energy claims.
+  Non-climate falsehoods score 0, and satire or parody of denial scores 0–15.
+  These rules were added after a held-out spot-check of the first 2,000
+  judgments (paper, Appendix E).
+- **Unit:** one call per (post, sub-industry) pair, 1,959,707 calls over about
+  ten days. Every (firm, post) row inherits its sub-industry's score, which
+  gives 43.5M firm × post rows. 398 judgments (0.02%) still failed to parse
+  after five retries and are left out of every average.
 
-## What is not included
+The post-level classifications in `pipeline/out/post_industry/` have columns
+`rid_i, post_id, industry, relevance, misinformation, misinfo_type, exposure,
+rationale`. The rationale is the model's own one-sentence explanation. The
+398 failed judgments stay in the shards with `relevance < 0`; `expand.py`
+drops them (`WHERE relevance >= 0`), so filter them out the same way when
+using the shards directly.
 
-- **Raw social media post data** (text, IDs, engagement at post level) is not
-  redistributed. Only the constructed daily index is included, so
-  `build_kl_index.py` is present for transparency rather than as a runnable
-  step — its output is already in
-  `Data/daily_misinfo_kl_measure_5models.parquet`.
-- Market data (prices, volumes, spreads, market caps) is licensed from the
-  data vendor. The derived firm-day panel is provided for academic replication;
-  users are responsible for their own compliance with the vendor's terms.
-- The paper manuscript.
+Re-running the classifier needs the post text (`work/posts.parquet`, not
+distributed), a GPU that holds the 37.5 GB of FP8 weights plus a KV cache, and vLLM
+0.21 in its own environment (`.venv_vllm`, as `serve_vllm.sh` expects). The
+order is: `normalize_energy.py`, then `launch_vllm.py`, `launch_classifier.py`
+and `watchdog.py`, then `retry_errors.py`, `expand.py` and
+`aggregate_firmday.py`. Run all of them from `pipeline/`.
 
-`build_kl_index.py` and `refresh_panel.py` contain absolute paths from the
-original working machine (`/home/jameskrice/Downloads/Paper 2`). They are
-preserved as-run for transparency; adjust the `BASE` path before reusing them.
-`main_analysis.py` uses portable paths relative to the repository root and runs
-as-is.
+## Data and privacy
+
+- **Not redistributed:** the raw Facebook post text and post metadata (page
+  or profile names and IDs, engagement counts). They fall under the Meta
+  Content Library terms of use. Neither are the model weights, which are
+  available from Hugging Face.
+- **Included:** the model's post-level scores keyed by MCL post ID, the
+  firm-day exposure index, and the firm-day financial panel.
+- **The financial panel** is derived from licensed market data (Refinitiv),
+  FRED, the World Bank and the Kenneth French Data Library. It is provided for
+  academic replication only; see `LICENSE`.
 
 ## Citation
 
 See `CITATION.cff`.
-
-## Licence
-
-Code is MIT-licensed. See `LICENSE` for the terms and for the note on data.

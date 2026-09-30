@@ -1,0 +1,47 @@
+\begin{table}[htbp]
+\centering
+\caption{Climate-Transition Panel, PanelOLS Full Readout: Model I (Percent Quoted Spread)}
+\label{tab:v2_full_modelI}
+\begin{threeparttable}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{l r r r r r r}
+\toprule
+ & \multicolumn{3}{c}{$\mathrm{Exp}^{\text{mean}}$} & \multicolumn{3}{c}{$\log(1+\mathrm{Exp}^{\text{sum}})$} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Term & Coef. & SE & $p$ & Coef. & SE & $p$ \\
+\midrule
+Exposure term & $+0.0038^{**}$ & 0.0019 & 0.049 & $+0.0038^{***}$ & 0.0012 & 0.001 \\
+Log Volume & $+0.1628$ & 0.1010 & 0.109 & $+0.1628$ & 0.1009 & 0.108 \\
+Log Market Cap & $+0.2247^{***}$ & 0.0847 & 0.009 & $+0.2248^{***}$ & 0.0846 & 0.009 \\
+Intraday Volatility & $+0.0560^{***}$ & 0.0052 & $<$0.001 & $+0.0560^{***}$ & 0.0052 & $<$0.001 \\
+$|$Order Flow$|$ & $+0.0251^{***}$ & 0.0060 & $<$0.001 & $+0.0251^{***}$ & 0.0060 & $<$0.001 \\
+Log Turnover & $-0.4501^{***}$ & 0.1026 & $<$0.001 & $-0.4502^{***}$ & 0.1026 & $<$0.001 \\
+CPI Inflation & $-0.0310^{***}$ & 0.0102 & 0.003 & $-0.0310^{***}$ & 0.0102 & 0.003 \\
+GDP Growth & $-0.0052$ & 0.0060 & 0.381 & $-0.0053$ & 0.0060 & 0.377 \\
+Unemployment & $+0.0201^{***}$ & 0.0074 & 0.007 & $+0.0201^{***}$ & 0.0074 & 0.007 \\
+\midrule
+Observations & & & 468,062 & & & 468,062 \\
+$R^2$ & & & 0.614 & & & 0.614 \\
+Within $R^2$ & & & 0.261 & & & 0.261 \\
+Adj.\ Within $R^2$ & & & 0.261 & & & 0.261 \\
+Wald $F$ (joint) & & & 21.91 & & & 21.77 \\
+Firm FE & & & Yes & & & Yes \\
+Year-Month FE & & & Yes & & & Yes \\
+SE clustering & & & Firm $+$ Date & & & Firm $+$ Date \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes:} Dependent variable: percent quoted bid--ask spread, Equation~\ref{eq:pin_reg}, 204-firm climate-transition panel. The two column blocks replace the exposure
+term with the firm-day mean exposure $\mathrm{Exp}^{\text{mean}}_{i,t}$ and its
+concave volume variant $\log(1+\mathrm{Exp}^{\text{sum}}_{i,t})$; control
+coefficients are nearly identical across the two blocks, as expected by
+Frisch--Waugh--Lovell when two variants of a sparse firm-day regressor have
+negligible partial correlation with the controls. Standard errors are CRV1
+two-way clustered by firm (RIC) and calendar date. Continuous controls are
+winsorized at the 1st and 99th percentiles; the exposure regressors are not
+winsorized. $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,52 @@
+\begin{table}[htbp]
+\centering
+\caption{Climate-Transition Panel, PanelOLS Full Readout: Model III (Fama--French Excess Return)}
+\label{tab:v2_full_modelIII}
+\begin{threeparttable}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{l r r r r r r}
+\toprule
+ & \multicolumn{3}{c}{$\mathrm{Exp}^{\text{mean}}$} & \multicolumn{3}{c}{$\log(1+\mathrm{Exp}^{\text{sum}})$} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Term & Coef. & SE & $p$ & Coef. & SE & $p$ \\
+\midrule
+Exposure term & $-0.0224$ & 0.0156 & 0.151 & $-0.0048$ & 0.0089 & 0.591 \\
+FF\_MktRF & $+0.6668^{***}$ & 0.0439 & $<$0.001 & $+0.6667^{***}$ & 0.0439 & $<$0.001 \\
+FF\_SMB & $+0.2003^{***}$ & 0.0450 & $<$0.001 & $+0.2002^{***}$ & 0.0450 & $<$0.001 \\
+FF\_HML & $+0.4195^{***}$ & 0.0481 & $<$0.001 & $+0.4196^{***}$ & 0.0481 & $<$0.001 \\
+FF\_RMW & $+0.0066$ & 0.0345 & 0.848 & $+0.0072$ & 0.0346 & 0.835 \\
+FF\_CMA & $+0.0169$ & 0.0446 & 0.704 & $+0.0171$ & 0.0446 & 0.702 \\
+Log Volume & $+0.1516^{***}$ & 0.0159 & $<$0.001 & $+0.1517^{***}$ & 0.0159 & $<$0.001 \\
+Log Market Cap & $+0.0677^{***}$ & 0.0215 & 0.002 & $+0.0677^{***}$ & 0.0215 & 0.002 \\
+Spread Percent & $+0.1435^{***}$ & 0.0279 & $<$0.001 & $+0.1434^{***}$ & 0.0279 & $<$0.001 \\
+Dividend Yield & $-0.0143^{***}$ & 0.0029 & $<$0.001 & $-0.0142^{***}$ & 0.0029 & $<$0.001 \\
+Intraday Volatility & $+0.0252^{**}$ & 0.0108 & 0.021 & $+0.0252^{**}$ & 0.0108 & 0.021 \\
+CPI Inflation & $+0.0008$ & 0.0119 & 0.945 & $+0.0008$ & 0.0119 & 0.946 \\
+GDP Growth & $+0.0077$ & 0.0173 & 0.656 & $+0.0077$ & 0.0173 & 0.658 \\
+Unemployment & $-0.0068$ & 0.0081 & 0.403 & $-0.0068$ & 0.0081 & 0.400 \\
+\midrule
+Observations & & & 382,890 & & & 382,890 \\
+$R^2$ & & & 0.077 & & & 0.077 \\
+Within $R^2$ & & & 0.069 & & & 0.069 \\
+Adj.\ Within $R^2$ & & & 0.069 & & & 0.069 \\
+Wald $F$ (joint) & & & 36.49 & & & 36.48 \\
+Firm FE & & & Yes & & & Yes \\
+Year-Month FE & & & Yes & & & Yes \\
+SE clustering & & & Firm $+$ Date & & & Firm $+$ Date \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes:} Dependent variable: daily Fama--French five-factor excess return, Equation~\ref{eq:ff5_aug}, 204-firm climate-transition panel. The two column blocks replace the exposure
+term with the firm-day mean exposure $\mathrm{Exp}^{\text{mean}}_{i,t}$ and its
+concave volume variant $\log(1+\mathrm{Exp}^{\text{sum}}_{i,t})$; control
+coefficients are nearly identical across the two blocks, as expected by
+Frisch--Waugh--Lovell when two variants of a sparse firm-day regressor have
+negligible partial correlation with the controls. Standard errors are CRV1
+two-way clustered by firm (RIC) and calendar date. Continuous controls are
+winsorized at the 1st and 99th percentiles; the exposure regressors are not
+winsorized. $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

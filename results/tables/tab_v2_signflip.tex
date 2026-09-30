@@ -1,0 +1,30 @@
+\begin{table}[htbp]
+\centering
+\caption{Climate-Transition Panel: Coefficient Heterogeneity across Renewable--Fossil, Regional, and Temporal Splits (Two-Way Clustered SE)}
+\label{tab:v2_signflip}
+\begin{threeparttable}
+\begin{tabular}{l r r r r r r}
+\toprule
+ & \multicolumn{2}{c}{Model I: Spread\%} & \multicolumn{2}{c}{Model II: CAPM $\beta$} & \multicolumn{2}{c}{Model III: ExcessReturn} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Subsample & Coef. & $N$ & Coef. & $N$ & Coef. & $N$ \\
+\midrule
+Renewables & +0.0046 & 76,680 & -0.0012 & 56,892 & -0.0417 & 56,678 \\
+Fossil fuels & +0.0028 & 391,382 & -0.0006 & 327,125 & -0.0180 & 326,212 \\
+United States & +0.0077 & 219,693 & +0.0008 & 160,380 & -0.0102 & 157,825 \\
+United Kingdom & -0.0010 & 6,954 & -0.0014 & 4,283 & +0.0190 & 4,297 \\
+European Union & -0.0005 & 4,802 & +0.0050 & 4,556 & +0.0307 & 4,678 \\
+China & +0.0007 & 194,377 & -0.0016 & 175,484 & -0.0443 & 176,846 \\
+Japan & +0.0034 & 42,236 & -0.0035$^{***}$ & 39,314 & +0.0085 & 39,244 \\
+Pre-2019 & -0.0005 & 193,062 & +0.0014 & 157,871 & -0.0240 & 164,801 \\
+Post-2019 & +0.0056$^{**}$ & 275,000 & -0.0077$^{***}$ & 226,146 & -0.0039 & 218,088 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\small
+\item \textit{Notes:} Each cell is the OLS coefficient on $\mathrm{Exp}^{\text{mean}}$ in the
+specification of Table~\ref{tab:v2_core}, estimated on the indicated subsample of the energy panel.
+Standard errors are clustered on RIC and Date. Cells where $N<1{,}000$ are omitted.
+$^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

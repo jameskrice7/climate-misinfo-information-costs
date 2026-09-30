@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering
+\caption{Triple interaction: Fossil $\times$ English-region $\times$ Post-2019 (Model~I, Spread\%, two-way clustered SE)}
+\label{tab:v2_triple}
+\begin{threeparttable}
+\begin{tabular}{l r r}
+\toprule
+Term & Coef. & SE \\
+\midrule
+$\mathrm{Exp}^{\text{mean}}$ & +0.0049 & (0.0192) \\
+$\mathrm{Exp}^{\text{mean}}\!\times\!\mathbb{1}\{\text{Fossil}\}$ & -0.0067 & (0.0205) \\
+$\mathrm{Exp}^{\text{mean}}\!\times\!\mathbb{1}\{\text{English region}\}$ & -0.1525$^{*}$ & (0.0862) \\
+$\mathrm{Exp}^{\text{mean}}\!\times\!\mathbb{1}\{\text{Post-2019}\}$ & -0.0125 & (0.0404) \\
+$\mathrm{Exp}^{\text{mean}}\!\times\!\text{Fossil}\!\times\!\text{English}$ & +0.1499$^{*}$ & (0.0870) \\
+$\mathrm{Exp}^{\text{mean}}\!\times\!\text{Fossil}\!\times\!\text{Post-2019}$ & -0.0010 & (0.0483) \\
+$\mathrm{Exp}^{\text{mean}}\!\times\!\text{English}\!\times\!\text{Post-2019}$ & +0.3624$^{*}$ & (0.1925) \\
+$\mathrm{Exp}^{\text{mean}}\!\times\!\text{Fossil}\!\times\!\text{English}\!\times\!\text{Post-2019}$ & -0.2930 & (0.1987) \\
+\midrule
+$N$ & 468,062 & \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\small
+\item \textit{Notes:} Estimation by Model~I; controls and fixed effects as in
+Table~\ref{tab:v2_core}. ``English region'' is US or UK. ``Fossil'' identifies the seven fossil
+TRBC sub-industries; ``Renewable'' firms are the complement within the energy panel.
+$^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

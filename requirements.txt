@@ -1,8 +1,13 @@
-# Pinned environment for Code/main_analysis.py
-# pyfixest is pinned deliberately: fixed-effect estimation details changed
-# across releases and the paper's numbers correspond to this version.
-pandas>=2.0
-numpy>=1.24
-pyarrow>=14.0
+# Analysis environment (analysis/*.py): the versions the paper's results were produced with.
+# pyfixest is pinned deliberately: the two-way clustered standard errors depend on it.
+pandas==3.0.3
+numpy==2.4.6
+pyarrow==24.0.0
 pyfixest==0.40.1
-scipy>=1.10
+scipy==1.15.3
+matplotlib==3.11.0
+duckdb==1.5.3
+
+# Classification pipeline (pipeline/*.py) additionally needs:
+#   httpx==0.28.1                       the async client
+#   vllm==0.21.0 (separate environment) the model server; see pipeline/serve_vllm.sh

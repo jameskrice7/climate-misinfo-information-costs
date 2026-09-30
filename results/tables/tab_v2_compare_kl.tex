@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\caption{Same-sample comparison of the new firm-day IV with the original daily KL index (two-way clustered SE)}
+\label{tab:v2_compare_kl}
+\begin{threeparttable}
+\begin{tabular}{l c c c c c c}
+\toprule
+ & \multicolumn{2}{c}{Model I: Spread\%} & \multicolumn{2}{c}{Model II: CAPM $\beta$} & \multicolumn{2}{c}{Model III: ExcessReturn} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+IV & Coef. & (SE) & Coef. & (SE) & Coef. & (SE) \\
+\midrule
+Daily KL (raw) & +0.0005 & (0.0052) & -0.0010 & (0.0007) & +0.1878$^{***}$ & (0.0600) \\
+Daily KL (engagement-weighted) & -0.0017 & (0.0013) & +0.0009$^{*}$ & (0.0005) & +0.0132 & (0.0201) \\
+Firm-day exposure $\mathrm{Exp}^{\text{mean}}$ & +0.0038$^{**}$ & (0.0019) & -0.0007 & (0.0012) & -0.0224 & (0.0156) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\small
+\item \textit{Notes:} All three rows are estimated on the same energy-subsample firm-day rows
+(observations with non-missing values for all three IVs). Pairwise sample correlations are
+$r=0.10$ between $\mathrm{Exp}^{\text{mean}}$ and engagement-weighted KL, $r=0.20$ between the
+per-post mean misinformation sub-score and engagement-weighted KL. Cluster-robust SE on RIC and Date.
+$^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

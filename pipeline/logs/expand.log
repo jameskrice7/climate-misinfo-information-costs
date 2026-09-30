@@ -1,0 +1,210 @@
+input shards: 980
+staging scores...
+  scores: 1,959,309 rows in 1s
+writing per-RIC parquet parts: 204 firms
+  [  1/204] 0386.HK                 217,657 rows | total      217,657 | 443409 rows/s | ETA 1.7min
+  [  2/204] 0857.HK                 217,658 rows | total      435,315 | 736386 rows/s | ETA 1.0min
+  [  3/204] 0883.HK                 212,200 rows | total      647,515 | 945635 rows/s | ETA 0.8min
+  [  4/204] 0968.HK                 217,355 rows | total      864,870 | 1103033 rows/s | ETA 0.7min
+  [  5/204] 1088.HK                 217,299 rows | total    1,082,169 | 1241008 rows/s | ETA 0.6min
+  [  6/204] 1516.TW                 217,943 rows | total    1,300,112 | 1353728 rows/s | ETA 0.5min
+  [  7/204] 1605.T                  217,658 rows | total    1,517,770 | 1441388 rows/s | ETA 0.5min
+  [  8/204] 2616.TW                 217,953 rows | total    1,735,723 | 1542559 rows/s | ETA 0.5min
+  [  9/204] 2904.TW                 217,953 rows | total    1,953,676 | 1595482 rows/s | ETA 0.4min
+  [ 10/204] 3576.TW                 217,954 rows | total    2,171,630 | 1647028 rows/s | ETA 0.4min
+  [ 11/204] 3686.TW                 217,954 rows | total    2,389,584 | 1697269 rows/s | ETA 0.4min
+  [ 12/204] 4934.TW                 217,270 rows | total    2,606,854 | 1741599 rows/s | ETA 0.4min
+  [ 13/204] 4949.TW                 211,879 rows | total    2,818,733 | 1788968 rows/s | ETA 0.4min
+  [ 14/204] 5019.T                  217,657 rows | total    3,036,390 | 1843736 rows/s | ETA 0.4min
+  [ 15/204] 5020.T                  217,657 rows | total    3,254,047 | 1890114 rows/s | ETA 0.4min
+  [ 16/204] 600026.SS               217,657 rows | total    3,471,704 | 1903962 rows/s | ETA 0.4min
+  [ 17/204] 600028.SS               217,657 rows | total    3,689,361 | 1944570 rows/s | ETA 0.3min
+  [ 18/204] 600051.SS               217,658 rows | total    3,907,019 | 1961104 rows/s | ETA 0.3min
+  [ 19/204] 600072.SS               217,658 rows | total    4,124,677 | 1976774 rows/s | ETA 0.3min
+  [ 20/204] 600098.SS               217,658 rows | total    4,342,335 | 1993789 rows/s | ETA 0.3min
+  [ 21/204] 600121.SS               217,658 rows | total    4,559,993 | 2006496 rows/s | ETA 0.3min
+  [ 22/204] 600123.SS               217,658 rows | total    4,777,651 | 2020107 rows/s | ETA 0.3min
+  [ 23/204] 600180.SS               217,658 rows | total    4,995,309 | 2035573 rows/s | ETA 0.3min
+  [ 24/204] 600188.SS               217,658 rows | total    5,212,967 | 2039224 rows/s | ETA 0.3min
+  [ 25/204] 600256.SS               217,658 rows | total    5,430,625 | 2047045 rows/s | ETA 0.3min
+  [ 26/204] 600310.SS               217,657 rows | total    5,648,282 | 2073249 rows/s | ETA 0.3min
+  [ 27/204] 600348.SS               217,658 rows | total    5,865,940 | 2087918 rows/s | ETA 0.3min
+  [ 28/204] 600395.SS               217,658 rows | total    6,083,598 | 2090958 rows/s | ETA 0.3min
+  [ 29/204] 600397.SS               217,658 rows | total    6,301,256 | 2103596 rows/s | ETA 0.3min
+  [ 30/204] 600403.SS               217,658 rows | total    6,518,914 | 2114110 rows/s | ETA 0.3min
+  [ 31/204] 600438.SS               217,658 rows | total    6,736,572 | 2118723 rows/s | ETA 0.3min
+  [ 32/204] 600481.SS               217,658 rows | total    6,954,230 | 2118177 rows/s | ETA 0.3min
+  [ 33/204] 600506.SS               217,657 rows | total    7,171,887 | 2124078 rows/s | ETA 0.3min
+  [ 34/204] 600508.SS               217,658 rows | total    7,389,545 | 2133852 rows/s | ETA 0.3min
+  [ 35/204] 600537.SS               217,658 rows | total    7,607,203 | 2141738 rows/s | ETA 0.3min
+  [ 36/204] 600546.SS               217,658 rows | total    7,824,861 | 2150185 rows/s | ETA 0.3min
+  [ 37/204] 600688.SS               217,657 rows | total    8,042,518 | 2161384 rows/s | ETA 0.3min
+  [ 38/204] 600724.SS               217,657 rows | total    8,260,175 | 2173792 rows/s | ETA 0.3min
+  [ 39/204] 600725.SS               217,658 rows | total    8,477,833 | 2179738 rows/s | ETA 0.3min
+  [ 40/204] 600732.SS               217,658 rows | total    8,695,491 | 2184172 rows/s | ETA 0.3min
+  [ 41/204] 600740.SS               217,658 rows | total    8,913,149 | 2187658 rows/s | ETA 0.3min
+  [ 42/204] 600758.SS               217,658 rows | total    9,130,807 | 2184284 rows/s | ETA 0.3min
+  [ 43/204] 600759.SS               217,658 rows | total    9,348,465 | 2186245 rows/s | ETA 0.3min
+  [ 44/204] 600871.SS               217,658 rows | total    9,566,123 | 2193957 rows/s | ETA 0.3min
+  [ 45/204] 600925.SS               206,992 rows | total    9,773,115 | 2199836 rows/s | ETA 0.3min
+  [ 46/204] 600938.SS               210,531 rows | total    9,983,646 | 2202473 rows/s | ETA 0.3min
+  [ 47/204] 600968.SS               212,911 rows | total   10,196,557 | 2191292 rows/s | ETA 0.3min
+  [ 48/204] 600971.SS               217,658 rows | total   10,414,215 | 2197542 rows/s | ETA 0.3min
+  [ 49/204] 600985.SS               217,658 rows | total   10,631,873 | 2201747 rows/s | ETA 0.3min
+  [ 50/204] 600997.SS               217,658 rows | total   10,849,531 | 2204969 rows/s | ETA 0.3min
+  [ 51/204] 601001.SS               217,658 rows | total   11,067,189 | 2201435 rows/s | ETA 0.3min
+  [ 52/204] 601012.SS               217,621 rows | total   11,284,810 | 2202547 rows/s | ETA 0.2min
+  [ 53/204] 601088.SS               203,462 rows | total   11,488,272 | 2202251 rows/s | ETA 0.2min
+  [ 54/204] 601101.SS               217,658 rows | total   11,705,930 | 2195751 rows/s | ETA 0.2min
+  [ 55/204] 601218.SS               217,621 rows | total   11,923,551 | 2196108 rows/s | ETA 0.2min
+  [ 56/204] 601225.SS               217,249 rows | total   12,140,800 | 2199150 rows/s | ETA 0.2min
+  [ 57/204] 601615.SS               214,098 rows | total   12,354,898 | 2199385 rows/s | ETA 0.2min
+  [ 58/204] 601666.SS               217,658 rows | total   12,572,556 | 2205032 rows/s | ETA 0.2min
+  [ 59/204] 601699.SS               217,658 rows | total   12,790,214 | 2206778 rows/s | ETA 0.2min
+  [ 60/204] 601798.SS               217,625 rows | total   13,007,839 | 2218444 rows/s | ETA 0.2min
+  [ 61/204] 601808.SS               217,658 rows | total   13,225,497 | 2220229 rows/s | ETA 0.2min
+  [ 62/204] 601857.SS               217,658 rows | total   13,443,155 | 2219688 rows/s | ETA 0.2min
+  [ 63/204] 601865.SS               214,225 rows | total   13,657,380 | 2218749 rows/s | ETA 0.2min
+  [ 64/204] 601898.SS               217,658 rows | total   13,875,038 | 2221372 rows/s | ETA 0.2min
+  [ 65/204] 601918.SS               217,658 rows | total   14,092,696 | 2225131 rows/s | ETA 0.2min
+  [ 66/204] 601975.SS               214,411 rows | total   14,307,107 | 2226942 rows/s | ETA 0.2min
+  [ 67/204] 603036.SS               215,681 rows | total   14,522,788 | 2236816 rows/s | ETA 0.2min
+  [ 68/204] 603063.SS               215,101 rows | total   14,737,889 | 2240204 rows/s | ETA 0.2min
+  [ 69/204] 603071.SS               210,282 rows | total   14,948,171 | 2244285 rows/s | ETA 0.2min
+  [ 70/204] 603185.SS               214,098 rows | total   15,162,269 | 2243742 rows/s | ETA 0.2min
+  [ 71/204] 603212.SS               212,911 rows | total   15,375,180 | 2248620 rows/s | ETA 0.2min
+  [ 72/204] 603223.SS               216,677 rows | total   15,591,857 | 2258780 rows/s | ETA 0.2min
+  [ 73/204] 603227.SS               216,678 rows | total   15,808,535 | 2262904 rows/s | ETA 0.2min
+  [ 74/204] 603318.SS               216,678 rows | total   16,025,213 | 2263442 rows/s | ETA 0.2min
+  [ 75/204] 603351.SS               214,156 rows | total   16,239,369 | 2265406 rows/s | ETA 0.2min
+  [ 76/204] 603353.SS               212,910 rows | total   16,452,279 | 2267057 rows/s | ETA 0.2min
+  [ 77/204] 603393.SS               215,681 rows | total   16,667,960 | 2269849 rows/s | ETA 0.2min
+  [ 78/204] 603507.SS               215,101 rows | total   16,883,061 | 2272498 rows/s | ETA 0.2min
+  [ 79/204] 603568.SS               216,712 rows | total   17,099,773 | 2270790 rows/s | ETA 0.2min
+  [ 80/204] 603619.SS               215,061 rows | total   17,314,834 | 2270084 rows/s | ETA 0.2min
+  [ 81/204] 603628.SS               215,681 rows | total   17,530,515 | 2272726 rows/s | ETA 0.2min
+  [ 82/204] 603727.SS               215,681 rows | total   17,746,196 | 2280968 rows/s | ETA 0.2min
+  [ 83/204] 603798.SS               215,680 rows | total   17,961,876 | 2281188 rows/s | ETA 0.2min
+  [ 84/204] 603990.SS               215,681 rows | total   18,177,557 | 2281469 rows/s | ETA 0.2min
+  [ 85/204] 605117.SS               211,784 rows | total   18,389,341 | 2280078 rows/s | ETA 0.2min
+  [ 86/204] 6477.TW                 217,266 rows | total   18,606,607 | 2280017 rows/s | ETA 0.2min
+  [ 87/204] 6505.TW                 217,953 rows | total   18,824,560 | 2286825 rows/s | ETA 0.2min
+  [ 88/204] 6806.TW                 211,619 rows | total   19,036,179 | 2288379 rows/s | ETA 0.2min
+  [ 89/204] 6873.TW                 207,913 rows | total   19,244,092 | 2290832 rows/s | ETA 0.2min
+  [ 90/204] 688121.SS               203,462 rows | total   19,447,554 | 2293247 rows/s | ETA 0.2min
+  [ 91/204] 688196.SS               203,462 rows | total   19,651,016 | 2296176 rows/s | ETA 0.2min
+  [ 92/204] 688223.SS               203,462 rows | total   19,854,478 | 2297926 rows/s | ETA 0.2min
+  [ 93/204] 688303.SS               203,462 rows | total   20,057,940 | 2297606 rows/s | ETA 0.2min
+  [ 94/204] 688349.SS               203,462 rows | total   20,261,402 | 2301591 rows/s | ETA 0.2min
+  [ 95/204] 688390.SS               203,462 rows | total   20,464,864 | 2300615 rows/s | ETA 0.2min
+  [ 96/204] 688408.SS               203,462 rows | total   20,668,326 | 2299535 rows/s | ETA 0.2min
+  [ 97/204] 688429.SS               203,462 rows | total   20,871,788 | 2299240 rows/s | ETA 0.2min
+  [ 98/204] 688472.SS               203,462 rows | total   21,075,250 | 2300367 rows/s | ETA 0.2min
+  [ 99/204] 688599.SS               203,462 rows | total   21,278,712 | 2303337 rows/s | ETA 0.2min
+  [100/204] 688660.SS               203,462 rows | total   21,482,174 | 2306233 rows/s | ETA 0.2min
+  [101/204] 688717.SS               203,462 rows | total   21,685,636 | 2306747 rows/s | ETA 0.2min
+  [102/204] 900948.SS               217,658 rows | total   21,903,294 | 2304191 rows/s | ETA 0.2min
+  [103/204] 9937.TW                 217,935 rows | total   22,121,229 | 2306826 rows/s | ETA 0.2min
+  [104/204] AADI.JK                 203,404 rows | total   22,324,633 | 2308887 rows/s | ETA 0.2min
+  [105/204] ABMM.JK                 213,759 rows | total   22,538,392 | 2311113 rows/s | ETA 0.2min
+  [106/204] ADRO.JK                 217,658 rows | total   22,756,050 | 2313815 rows/s | ETA 0.2min
+  [107/204] AIMS.JK                 208,669 rows | total   22,964,719 | 2315168 rows/s | ETA 0.1min
+  [108/204] AKRA.JK                 217,657 rows | total   23,182,376 | 2317917 rows/s | ETA 0.1min
+  [109/204] APA.OQ                  217,658 rows | total   23,400,034 | 2315783 rows/s | ETA 0.1min
+  [110/204] APEX.JK                 203,407 rows | total   23,603,441 | 2316207 rows/s | ETA 0.1min
+  [111/204] ARII.JK                 207,361 rows | total   23,810,802 | 2316935 rows/s | ETA 0.1min
+  [112/204] ARTI.JK                 203,668 rows | total   24,014,470 | 2316746 rows/s | ETA 0.1min
+  [113/204] ATLA.JK                 204,782 rows | total   24,219,252 | 2316464 rows/s | ETA 0.1min
+  [114/204] BKR.OQ                  217,658 rows | total   24,436,910 | 2323549 rows/s | ETA 0.1min
+  [115/204] BOAT.JK                 203,865 rows | total   24,640,775 | 2324791 rows/s | ETA 0.1min
+  [116/204] BOSS.JK                 204,364 rows | total   24,845,139 | 2325775 rows/s | ETA 0.1min
+  [117/204] BP.L                    217,657 rows | total   25,062,796 | 2332448 rows/s | ETA 0.1min
+  [118/204] BRAV3.SA                210,227 rows | total   25,273,023 | 2334172 rows/s | ETA 0.1min
+  [119/204] BSSR.JK                 217,483 rows | total   25,490,506 | 2333053 rows/s | ETA 0.1min
+  [120/204] BULL.JK                 206,102 rows | total   25,696,608 | 2335586 rows/s | ETA 0.1min
+  [121/204] BUMI.JK                 211,226 rows | total   25,907,834 | 2336046 rows/s | ETA 0.1min
+  [122/204] BYAN.JK                 215,487 rows | total   26,123,321 | 2336668 rows/s | ETA 0.1min
+  [123/204] CNKO.JK                 203,744 rows | total   26,327,065 | 2337950 rows/s | ETA 0.1min
+  [124/204] COAL.JK                 203,404 rows | total   26,530,469 | 2337958 rows/s | ETA 0.1min
+  [125/204] COP.N                   217,658 rows | total   26,748,127 | 2338889 rows/s | ETA 0.1min
+  [126/204] CTRA.N                  217,658 rows | total   26,965,785 | 2338410 rows/s | ETA 0.1min
+  [127/204] CUAN.JK                 204,907 rows | total   27,170,692 | 2338310 rows/s | ETA 0.1min
+  [128/204] CVX.N                   217,658 rows | total   27,388,350 | 2338864 rows/s | ETA 0.1min
+  [129/204] DEWA.JK                 204,333 rows | total   27,592,683 | 2340325 rows/s | ETA 0.1min
+  [130/204] DOID.JK                 209,844 rows | total   27,802,527 | 2341467 rows/s | ETA 0.1min
+  [131/204] DSSA.JK                 205,252 rows | total   28,007,779 | 2342861 rows/s | ETA 0.1min
+  [132/204] DVN.N                   217,658 rows | total   28,225,437 | 2341288 rows/s | ETA 0.1min
+  [133/204] DWGL.JK                 203,404 rows | total   28,428,841 | 2341086 rows/s | ETA 0.1min
+  [134/204] ELSA.JK                 217,614 rows | total   28,646,455 | 2341232 rows/s | ETA 0.1min
+  [135/204] ENPH.OQ                 211,590 rows | total   28,858,045 | 2342650 rows/s | ETA 0.1min
+  [136/204] ENR1n.DE                216,669 rows | total   29,074,714 | 2343710 rows/s | ETA 0.1min
+  [137/204] ENRG.JK                 203,906 rows | total   29,278,620 | 2345268 rows/s | ETA 0.1min
+  [138/204] EOG.N                   217,658 rows | total   29,496,278 | 2344362 rows/s | ETA 0.1min
+  [139/204] EQT.N                   217,658 rows | total   29,713,936 | 2344003 rows/s | ETA 0.1min
+  [140/204] ESSA.JK                 213,795 rows | total   29,927,731 | 2343959 rows/s | ETA 0.1min
+  [141/204] ETWA.JK                 207,766 rows | total   30,135,497 | 2344770 rows/s | ETA 0.1min
+  [142/204] EXE.OQ                  215,278 rows | total   30,350,775 | 2343618 rows/s | ETA 0.1min
+  [143/204] FANG.OQ                 216,590 rows | total   30,567,365 | 2340915 rows/s | ETA 0.1min
+  [144/204] FIRE.JK                 203,404 rows | total   30,770,769 | 2341761 rows/s | ETA 0.1min
+  [145/204] FSLR.OQ                 211,590 rows | total   30,982,359 | 2338423 rows/s | ETA 0.1min
+  [146/204] FUTR.JK                 208,065 rows | total   31,190,424 | 2339082 rows/s | ETA 0.1min
+  [147/204] GEMS.JK                 216,178 rows | total   31,406,602 | 2340688 rows/s | ETA 0.1min
+  [148/204] GTBO.JK                 206,754 rows | total   31,613,356 | 2341967 rows/s | ETA 0.1min
+  [149/204] HADE.JK                 203,990 rows | total   31,817,346 | 2341521 rows/s | ETA 0.1min
+  [150/204] HAL.N                   217,658 rows | total   32,035,004 | 2344850 rows/s | ETA 0.1min
+  [151/204] HES.N                   217,509 rows | total   32,252,513 | 2343873 rows/s | ETA 0.1min
+  [152/204] HITS.JK                 213,690 rows | total   32,466,203 | 2344328 rows/s | ETA 0.1min
+  [153/204] HRUM.JK                 212,096 rows | total   32,678,299 | 2345677 rows/s | ETA 0.1min
+  [154/204] HUMI.JK                 207,111 rows | total   32,885,410 | 2347262 rows/s | ETA 0.1min
+  [155/204] IATA.JK                 211,099 rows | total   33,096,509 | 2346238 rows/s | ETA 0.1min
+  [156/204] INDY.JK                 215,160 rows | total   33,311,669 | 2347752 rows/s | ETA 0.1min
+  [157/204] ITMA.JK                 213,162 rows | total   33,524,831 | 2348397 rows/s | ETA 0.1min
+  [158/204] ITMG.JK                 217,658 rows | total   33,742,489 | 2349341 rows/s | ETA 0.1min
+  [159/204] JSKY.JK                 204,613 rows | total   33,947,102 | 2351734 rows/s | ETA 0.1min
+  [160/204] KKGI.JK                 216,434 rows | total   34,163,536 | 2352395 rows/s | ETA 0.1min
+  [161/204] KMI.N                   217,657 rows | total   34,381,193 | 2352714 rows/s | ETA 0.1min
+  [162/204] KOPI.JK                 211,279 rows | total   34,592,472 | 2352891 rows/s | ETA 0.1min
+  [163/204] LEAD.JK                 206,544 rows | total   34,799,016 | 2352991 rows/s | ETA 0.1min
+  [164/204] MAHA.JK                 207,317 rows | total   35,006,333 | 2353105 rows/s | ETA 0.1min
+  [165/204] MBAP.JK                 217,115 rows | total   35,223,448 | 2352916 rows/s | ETA 0.1min
+  [166/204] MCOL.JK                 211,357 rows | total   35,434,805 | 2353230 rows/s | ETA 0.1min
+  [167/204] MEDC.JK                 213,599 rows | total   35,648,404 | 2354145 rows/s | ETA 0.1min
+  [168/204] MKAP.JK                 204,782 rows | total   35,853,186 | 2353857 rows/s | ETA 0.1min
+  [169/204] MOLI.JK                 212,828 rows | total   36,066,014 | 2353928 rows/s | ETA 0.1min
+  [170/204] MPC.N                   217,657 rows | total   36,283,671 | 2358256 rows/s | ETA 0.1min
+  [171/204] MTFN.JK                 214,277 rows | total   36,497,948 | 2358110 rows/s | ETA 0.0min
+  [172/204] OKE.N                   217,657 rows | total   36,715,605 | 2358543 rows/s | ETA 0.0min
+  [173/204] OXY.N                   217,658 rows | total   36,933,263 | 2358342 rows/s | ETA 0.0min
+  [174/204] PETR.KL                 217,657 rows | total   37,150,920 | 2360868 rows/s | ETA 0.0min
+  [175/204] PETR3.SA                217,169 rows | total   37,368,089 | 2361363 rows/s | ETA 0.0min
+  [176/204] PETR4.SA                217,169 rows | total   37,585,258 | 2360923 rows/s | ETA 0.0min
+  [177/204] PKPK.JK                 203,537 rows | total   37,788,795 | 2363301 rows/s | ETA 0.0min
+  [178/204] PRIO3.SA                211,253 rows | total   38,000,048 | 2362908 rows/s | ETA 0.0min
+  [179/204] PSX.N                   217,649 rows | total   38,217,697 | 2365462 rows/s | ETA 0.0min
+  [180/204] PTBA.JK                 217,658 rows | total   38,435,355 | 2365117 rows/s | ETA 0.0min
+  [181/204] RAIZ4.SA                213,119 rows | total   38,648,474 | 2363876 rows/s | ETA 0.0min
+  [182/204] RECV3.SA                212,216 rows | total   38,860,690 | 2364475 rows/s | ETA 0.0min
+  [183/204] RMKO.JK                 203,404 rows | total   39,064,094 | 2362451 rows/s | ETA 0.0min
+  [184/204] SGER.JK                 210,902 rows | total   39,274,996 | 2361619 rows/s | ETA 0.0min
+  [185/204] SHEL.AS                 216,490 rows | total   39,491,486 | 2362196 rows/s | ETA 0.0min
+  [186/204] SHEL.L                  215,529 rows | total   39,707,015 | 2362055 rows/s | ETA 0.0min
+  [187/204] SICO.JK                 210,667 rows | total   39,917,682 | 2361536 rows/s | ETA 0.0min
+  [188/204] SLB.N                   217,658 rows | total   40,135,340 | 2364435 rows/s | ETA 0.0min
+  [189/204] SMMT.JK                 210,839 rows | total   40,346,179 | 2364519 rows/s | ETA 0.0min
+  [190/204] SMRU.JK                 203,906 rows | total   40,550,085 | 2365346 rows/s | ETA 0.0min
+  [191/204] SUGI.JK                 203,906 rows | total   40,753,991 | 2365262 rows/s | ETA 0.0min
+  [192/204] SURE.JK                 203,403 rows | total   40,957,394 | 2365374 rows/s | ETA 0.0min
+  [193/204] TEBE.JK                 213,120 rows | total   41,170,514 | 2365175 rows/s | ETA 0.0min
+  [194/204] TOBA.JK                 210,190 rows | total   41,380,704 | 2365778 rows/s | ETA 0.0min
+  [195/204] TPL.N                   217,658 rows | total   41,598,362 | 2361157 rows/s | ETA 0.0min
+  [196/204] TRGP.N                  217,657 rows | total   41,816,019 | 2360869 rows/s | ETA 0.0min
+  [197/204] TTEF.PA                 217,658 rows | total   42,033,677 | 2359276 rows/s | ETA 0.0min
+  [198/204] UGPA3.SA                217,657 rows | total   42,251,334 | 2359965 rows/s | ETA 0.0min
+  [199/204] UNTR.JK                 217,658 rows | total   42,468,992 | 2359924 rows/s | ETA 0.0min
+  [200/204] VBBR3.SA                215,075 rows | total   42,684,067 | 2360721 rows/s | ETA 0.0min
+  [201/204] VLO.N                   217,657 rows | total   42,901,724 | 2362935 rows/s | ETA 0.0min
+  [202/204] WMB.N                   217,657 rows | total   43,119,381 | 2364384 rows/s | ETA 0.0min
+  [203/204] WOWS.JK                 203,404 rows | total   43,322,785 | 2364766 rows/s | ETA 0.0min
+  [204/204] XOM.N                   217,657 rows | total   43,540,442 | 2368457 rows/s | ETA 0.0min
+DONE: 43,540,442 rows across 204 parquet parts, 2764 MB total, elapsed 19s
+Read as one table: duckdb.read_parquet('out/energy_scored/*.parquet')

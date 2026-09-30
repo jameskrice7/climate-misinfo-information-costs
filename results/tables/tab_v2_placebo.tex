@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering
+\caption{Placebo: high-relevance vs.\ low-relevance climate posts (two-way clustered SE)}
+\label{tab:v2_placebo}
+\begin{threeparttable}
+\begin{tabular}{l c c c}
+\toprule
+IV & Spread\% & CAPM $\beta$ & ExcessReturn \\
+\midrule
+Posts with sector-relevance $\geq 50$ (treated) & -0.0002$^{*}$ & -0.0001 & -0.0029$^{*}$ \\
+Posts with sector-relevance $<10$ (placebo) & -0.0178 & -0.0039 & +0.1647 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\small
+\item \textit{Notes:} The IV in each row is the firm-day mean exposure computed using only those
+classified posts whose per-post sector-relevance falls into the indicated band, then merged into the
+energy panel and used in the Table~\ref{tab:v2_core} specification.
+$^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

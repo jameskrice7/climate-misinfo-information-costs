@@ -1,3 +1,4 @@
 # Data and figures are binary; never apply line-ending conversion
 *.parquet binary
 *.png binary
+*.pdf binary

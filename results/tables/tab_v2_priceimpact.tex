@@ -1,0 +1,49 @@
+\begin{table}[htbp]
+\centering
+\caption{Climate-Transition Panel, PanelOLS Full Readout: Price Impact (Joint Test of H1)}
+\label{tab:v2_priceimpact}
+\begin{threeparttable}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{l r r r r r r}
+\toprule
+ & \multicolumn{3}{c}{$\mathrm{Exp}^{\text{mean}}$} & \multicolumn{3}{c}{$\log(1+\mathrm{Exp}^{\text{sum}})$} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Term & Coef. & SE & $p$ & Coef. & SE & $p$ \\
+\midrule
+Exposure term & $+0.0018$ & 0.0028 & 0.531 & $+0.0006$ & 0.0015 & 0.674 \\
+Exposure term (lag 1)\tnote{a} & $+0.0066$ & 0.0042 & 0.118 & & & \\
+Log Volume & $+0.1641^{**}$ & 0.0771 & 0.035 & $+0.1641^{**}$ & 0.0771 & 0.035 \\
+Log Market Cap & $+0.1013$ & 0.0645 & 0.118 & $+0.1013$ & 0.0645 & 0.118 \\
+Intraday Volatility & $+0.1754^{***}$ & 0.0075 & $<$0.001 & $+0.1754^{***}$ & 0.0075 & $<$0.001 \\
+$|$Order Flow$|$ & $+0.0351^{***}$ & 0.0060 & $<$0.001 & $+0.0351^{***}$ & 0.0060 & $<$0.001 \\
+Log Turnover & $-0.2217^{***}$ & 0.0785 & 0.005 & $-0.2217^{***}$ & 0.0785 & 0.005 \\
+CPI Inflation & $-0.0190^{***}$ & 0.0053 & $<$0.001 & $-0.0190^{***}$ & 0.0053 & $<$0.001 \\
+GDP Growth & $-0.0106^{**}$ & 0.0050 & 0.035 & $-0.0106^{**}$ & 0.0050 & 0.035 \\
+Unemployment & $-0.0039$ & 0.0043 & 0.367 & $-0.0039$ & 0.0043 & 0.368 \\
+\midrule
+Observations & & & 468,062 & & & 468,062 \\
+$R^2$ & & & 0.507 & & & 0.507 \\
+Within $R^2$ & & & 0.391 & & & 0.391 \\
+Adj.\ Within $R^2$ & & & 0.391 & & & 0.391 \\
+Wald $F$ (joint) & & & 232.04 & & & 229.56 \\
+Firm FE & & & Yes & & & Yes \\
+Year-Month FE & & & Yes & & & Yes \\
+SE clustering & & & Firm $+$ Date & & & Firm $+$ Date \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Notes:} Dependent variable: per-dollar price impact, estimated with the Model~I control set and fixed effects (Equation~\ref{eq:pin_reg} with PriceImpact as the outcome), 204-firm climate-transition panel. The two column blocks replace the exposure
+term with the firm-day mean exposure $\mathrm{Exp}^{\text{mean}}_{i,t}$ and its
+concave volume variant $\log(1+\mathrm{Exp}^{\text{sum}}_{i,t})$; control
+coefficients are nearly identical across the two blocks, as expected by
+Frisch--Waugh--Lovell when two variants of a sparse firm-day regressor have
+negligible partial correlation with the controls. Standard errors are CRV1
+two-way clustered by firm (RIC) and calendar date. Continuous controls are
+winsorized at the 1st and 99th percentiles; the exposure regressors are not
+winsorized. $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\item[a] The lag-1 row replaces the contemporaneous exposure with its one-day lag on the restricted sample of 374,409 firm-days for which both exposures are observed, mirroring the lag specification of Table~\ref{tab:v2_lag}.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

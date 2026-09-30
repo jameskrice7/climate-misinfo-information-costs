@@ -26,8 +26,9 @@ NOTE ON DATA
 
 The MIT licence above covers the CODE in this repository.
 
-The firm-day panel in `Data/` is derived from licensed market data (prices,
+The firm-day panel in `data/` is derived from licensed market data (prices,
 volumes, bid-ask spreads, market capitalisations) and is provided for academic
-replication only. No raw social media post text is redistributed. Users of the
-data are responsible for ensuring their own use complies with the terms of the
-underlying data providers.
+replication only. The post-level classifications in `pipeline/out/` are model
+outputs keyed by Meta Content Library post IDs; no post text or post metadata
+is redistributed. Users of the data are responsible for ensuring their own use
+complies with the terms of the underlying data providers.

@@ -1,0 +1,133 @@
+loading energy panel + firm-day IV ...
+  panel rows 726,890 | with_posts 714,227 (98.3%)
+
+=== CORE MAIN MODELS (energy subsample) ===
+  N rows after dropna: PIN=468,062 CAPM=384,017 FF=382,890
+  fd_mean_exposure         | I=+3.8418e-03(p=0.049) II=-7.3916e-04(p=0.525) III=-2.2430e-02(p=0.151)
+  log_fd_sum_exposure      | I=+3.8273e-03(p=0.001) II=-1.9615e-04(p=0.716) III=-4.7967e-03(p=0.591)
+  fd_mean_misinformation   | I=+8.3235e-04(p=0.020) II=-1.1586e-04(p=0.215) III=+3.2976e-03(p=0.323)
+  fd_mean_relevance        | I=+3.1823e-04(p=0.548) II=+8.1815e-04(p=0.011) III=-3.8555e-03(p=0.194)
+
+=== STANDARDIZED EFFECTS ===
+
+=== SIGN-FLIP DECOMPOSITION ===
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+  Renewable  I_Spread coef=0.004624127084062088  p=0.11165622413124399  N=76680
+  Fossil     I_Spread coef=0.002845781266936604  p=0.17245725045707938  N=391382
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+  US         I_Spread coef=0.007722897822821363  p=0.14922592113755306  N=219693
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+  UK         I_Spread coef=-0.0009720548365716237  p=0.16713712555003424  N=6954
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+  EU         I_Spread coef=-0.000524291388423685  p=nan  N=4802
+  CN         I_Spread coef=0.0006543810589135827  p=0.12111416415927923  N=194377
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/feols_.py:1084: RuntimeWarning: invalid value encountered in sqrt
+  self._se = np.sqrt(np.diagonal(self._vcov))
+  JP         I_Spread coef=0.0033659557693349377  p=0.5851288679391997  N=42236
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/model_matrix_fixest_.py:215: UserWarning: 1 singleton fixed effect(s) detected. These observations are dropped from the model.
+  warnings.warn(
+  Pre2019    I_Spread coef=-0.0004746477372202077  p=0.8039344805373856  N=193062
+  Post2019   I_Spread coef=0.005636877746746705  p=0.023836764395872123  N=275000
+
+=== SUBPERIOD ===
+  2012-2018 I_Spread   coef=-4.7465e-04 p=0.804 N=193,062
+  2012-2018 II_CAPM    coef=+1.4134e-03 p=0.116 N=157,871
+/home/jameskrice/Desktop/Paper2_reclassify/.venv_tools/lib/python3.12/site-packages/pyfixest/estimation/model_matrix_fixest_.py:215: UserWarning: 1 singleton fixed effect(s) detected. These observations are dropped from the model.
+  warnings.warn(
+  2012-2018 III_FF     coef=-2.4000e-02 p=0.136 N=164,801
+  2019-2025 I_Spread   coef=+5.6369e-03 p=0.024 N=275,000
+  2019-2025 II_CAPM    coef=-7.6941e-03 p=0.000 N=226,146
+  2019-2025 III_FF     coef=-3.9420e-03 p=0.916 N=218,088
+
+=== LAG SPECIFICATION ===
+  I_Spread   contemp=+4.4282e-03(p=0.033) lag1=+1.0386e-02(p=0.004) N=374,409
+  II_CAPM    contemp=-1.1045e-03(p=0.397) lag1=-1.6040e-03(p=0.350) N=309,543
+  III_FF     contemp=-1.5607e-02(p=0.312) lag1=-2.2842e-02(p=0.381) N=311,231
+
+=== PLACEBO (relevance high vs low) ===
+  building placebo aggregates ...
+  relevant           I_Spread=-2.0898e-04 (p=0.079)
+  irrelevant_placebo I_Spread=-1.7789e-02 (p=0.353)
+
+=== COMPARISON WITH ORIGINAL kl_weighted ===
+
+=== TRIPLE INTERACTION (Fossil x English x Post2019) ===
+
+=== DESCRIPTIVE STATS OF NEW IV ===
+  IV-IV correlation: {'n': 714227, 'corr_mean_exposure_kl_weighted': 0.09847853263975724, 'corr_sum_exposure_kl_weighted': -0.042856113793742, 'corr_mean_misinfo_kl_weighted': 0.1955400457441976}
+
+ALL DONE in 1.5 min -> /home/jameskrice/Desktop/Paper2_reclassify/out/paper_v2/econ_results_v2.json
