@@ -5,6 +5,7 @@
 \begin{minipage}{\linewidth}
 \small
 \setlength{\tabcolsep}{4pt}
+\begingroup\centering
 \begin{tabular}{p{0.57\linewidth}rr}
 \toprule
 Reference calculation & SE & $p$ \\
@@ -16,7 +17,7 @@ Date-score HAC, bandwidth 20 & 0.00223 & 0.521 \\
 Date-score HAC, bandwidth 60 & 0.00201 & 0.476 \\
 Sector score signs & --- & 0.512 \\
 \bottomrule
-\end{tabular}
+\end{tabular}\par\endgroup
 \par\vspace{0.5em}\footnotesize The coefficient and observations are identical in every row. Sector/date clustering has nine sectors. HAC uses ordered observed dates and a normal reference. Score signs enumerate 512 combinations and require independent symmetric sector scores; this is a diagnostic, not exact randomization inference.
 \end{minipage}
 \end{table}

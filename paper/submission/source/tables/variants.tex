@@ -5,6 +5,7 @@
 \begin{minipage}{\linewidth}
 \small
 \setlength{\tabcolsep}{4pt}
+\begingroup\centering
 \begin{tabular}{p{0.48\linewidth}rrr}
 \toprule
 Content regressor & Coefficient & SE & $p$ \\
@@ -17,7 +18,7 @@ Share with misinformation at least 25 & 0.0338 & 0.0897 & 0.716 \\
 Positive composite indicator & -0.0036 & 0.0040 & 0.398 \\
 Composite with volume and relevance controls & -0.0013 & 0.0023 & 0.591 \\
 \bottomrule
-\end{tabular}
+\end{tabular}\par\endgroup
 \par\vspace{0.5em}\footnotesize Principal controls and fixed effects throughout. Regressor units differ across rows; raw coefficient sizes are not comparable. The final row adds log one plus post count and mean relevance jointly. Sector/date inference.
 \end{minipage}
 \end{table}

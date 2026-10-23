@@ -32,10 +32,10 @@ def table(file,caption,label,headers,rows,note,width='0.43\\linewidth',size='sma
     spec='p{'+width+'}'+'r'*(len(headers)-1)
     lines=[r'\begin{table}[htbp]',r'\centering',r'\caption{'+caption+'}',
       r'\label{'+label+'}',r'\begin{minipage}{\linewidth}','\\'+size,
-      r'\setlength{\tabcolsep}{4pt}',r'\begin{tabular}{'+spec+'}',r'\toprule',
+      r'\setlength{\tabcolsep}{4pt}',r'\begingroup\centering',r'\begin{tabular}{'+spec+'}',r'\toprule',
       ' & '.join(headers)+r' \\',r'\midrule']
     lines+=[' & '.join(map(str,row))+r' \\' for row in rows]
-    lines +=[r'\bottomrule',r'\end{tabular}',r'\par\vspace{0.5em}\footnotesize '+note,
+    lines +=[r'\bottomrule',r'\end{tabular}\par\endgroup',r'\par\vspace{0.5em}\footnotesize '+note,
        r'\end{minipage}',r'\end{table}']
     write('tables/'+file,'\n'.join(lines))
 
