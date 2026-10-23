@@ -1,7 +1,8 @@
 cff-version: 1.2.0
 message: "If you use these replication materials, please cite the paper."
 title: >-
-  Replication materials — Climate misinformation and quoted liquidity in energy equities
+  Replication materials — The Information Costs of Climate Misinformation:
+  Evidence from Global Financial Data
 abstract: >-
   Replication code, fixed classification scores, input audits and submission
   materials for a study of climate content and quoted liquidity in energy

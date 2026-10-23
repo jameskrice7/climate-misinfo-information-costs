@@ -1,0 +1,13 @@
+\begin{table}[htbp]\centering\footnotesize
+\caption{Exposure and quoted spreads across fixed-effect specifications}
+\label{tab:v2_core}
+\begin{threeparttable}\begin{tabular}{l r r r r}\toprule
+Specification & Coefficient & SE & $p$ & $N$ \\\midrule
+Security + month & +0.0041 & 0.0020 & 0.073 & 486,655 \\
+Security + date & +0.0145 & 0.0079 & 0.102 & 486,655 \\
+Security + market-day & +0.0129 & 0.0050 & 0.033 & 486,655 \\
++ sector-month & -0.0033 & 0.0019 & 0.117 & 486,655 \\
+Sector-month + prior controls & -0.0014 & 0.0022 & 0.533 & 485,800 \\
+\bottomrule\end{tabular}
+\begin{tablenotes}\small\item The first four rows use identical observations, contemporaneous controls and tail caps. The final row uses prior-session controls. The outcome is the quoted spread in percentage points; uncertainty clusters by sector/date, with nine sectors. Market-day effects use actual listing markets. The positive and imprecise estimates are retained together.\end{tablenotes}
+\end{threeparttable}\end{table}

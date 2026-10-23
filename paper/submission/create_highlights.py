@@ -5,11 +5,11 @@ from docx.shared import Inches,Pt,RGBColor
 
 ROOT=Path(__file__).resolve().parent
 highlights=[
- 'Climate content is linked to quoted spreads across nine energy sub-industries.',
- 'Market-day and sector-month controls change the positive monthly association.',
- 'The principal estimate does not establish a positive spread association.',
- 'Inference accounts for sector-level content and common daily trading conditions.',
- 'Content availability and investor exposure remain distinct economic concepts.'
+ 'Sector-specific climate content connects political information to energy finance.',
+ 'Greater exposure is associated with wider spreads under local market-day controls.',
+ 'The association is imprecise after sector-month conditions are absorbed.',
+ 'A sector-sensitive index preserves differences across fossil and renewable firms.',
+ 'Timing and alternative-outcome checks do not establish additional robust effects.'
 ]
 assert all(len(h)<=85 for h in highlights)
 doc=Document(); sec=doc.sections[0]
@@ -19,7 +19,8 @@ normal=doc.styles['Normal'];normal.font.name='Times New Roman';normal.font.size=
 normal.paragraph_format.space_after=Pt(12)
 title=doc.styles['Title'];title.font.name='Times New Roman';title.font.size=Pt(16);title.font.color.rgb=RGBColor(0,0,0)
 doc.add_paragraph('Highlights',style='Title')
-doc.add_paragraph('Climate misinformation and quoted liquidity in energy equities')
+doc.add_paragraph('The Information Costs of Climate Misinformation')
+doc.add_paragraph('Evidence from Global Financial Data')
 for h in highlights:doc.add_paragraph(h,style='List Bullet')
 # Remove inherited template rules as well as direct paragraph borders.
 for root in [doc._element,doc.styles._element]:

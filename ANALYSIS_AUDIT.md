@@ -1,6 +1,6 @@
 # Analysis audit and interpretation
 
-The submitted paper is **Climate misinformation and quoted liquidity in energy equities**, prepared for **Energy Economics**. The analysis uses the fixed scores; it does not execute classification or require a GPU.
+The submitted paper is **The Information Costs of Climate Misinformation: Evidence from Global Financial Data**, prepared for **Energy Economics**. The analysis uses the fixed scores; it does not execute classification or require a GPU. The paper retains the attached draft's literature, format and scale, with targeted empirical changes. The positive monthly and local market-day associations are presented alongside the saturated-model nulls; the numerical evidence below is unchanged.
 
 ## Main conclusion
 
@@ -38,7 +38,7 @@ The repository does not distribute a post-ID/date crosswalk. Post IDs are intern
 
 - 37 specifications and 160 coefficient rows are saved under `results/publication/`.
 - Six substantive checks cover market assignment, quote/gap identities, support and unique keys, session lags, sector assignment and independent Frisch–Waugh–Lovell numerical agreement.
-- All manuscript tables and data figures are generated from the saved model results.
+- Financial robustness tables and figures are generated from the completed model results. Supplied financial diagnostics, corpus descriptions and owner-network assets are retained from the author attachment; underlying platform summaries require authorized source records to regenerate.
 - Anonymous PDFs are checked for identifying text, unresolved references, nonfinite printed results and prohibited draft/hardware wording, then rendered for visual inspection.
 
 Energy Economics is an ambitious submission target because the paper concerns information conditions in energy-equity trading. The stronger analysis changes the conclusion and does not guarantee external review. Independent classification validation and credible causal variation would still materially strengthen the project.

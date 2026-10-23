@@ -2,3 +2,6 @@
 *.parquet binary
 *.png binary
 *.pdf binary
+
+# Preserve the supplied author attachment verbatim, including its whitespace.
+paper/source/** -whitespace

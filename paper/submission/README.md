@@ -1,6 +1,6 @@
 # Energy Economics submission package
 
-**Title:** Climate misinformation and quoted liquidity in energy equities
+**Title:** The Information Costs of Climate Misinformation: Evidence from Global Financial Data
 
 **Author:** James Rice, University of Essex
 
@@ -12,7 +12,7 @@
 
 | File | Purpose |
 |---|---|
-| `Manuscript_Anonymous.pdf` | Main manuscript, with tables, figure, references and AI disclosure |
+| `Manuscript_Anonymous.pdf` | Restored-format main manuscript, original literature and integrated appendix, with targeted empirical revisions |
 | `Supplement_Anonymous.pdf` | Measurement details, inference, robustness tables and sector leave-out figure |
 | `Title_Page.pdf` | Author details, funding, ethics, competing interests and repository link |
 | `Cover_Letter.pdf` | Cover letter addressed to Energy Economics editors |
@@ -35,7 +35,17 @@ python -m pip install -r requirements-publication.txt
 python analysis/run_publication.py --compile
 ```
 
-This runs input audits, all financial models, the blank annotation-sample selection, table/figure generation, substantive tests and PDF compilation. It does not run classification. Python 3.12, the pinned dependencies, `pdflatex` and `bibtex` are required. For an existing completed analysis, `python analysis/run_publication.py --compile-only` rebuilds PDFs without fitting models.
+This runs input audits, all financial models, annotation-sample selection, financial table/figure generation, targeted manuscript preparation, checks and PDF compilation. It does not run classification. Python 3.12, pinned dependencies, `pdflatex` and `biber` are required. The full analysis has already been completed and was not rerun for the editorial restoration.
+
+For text/table revisions using only the saved estimates:
+
+```sh
+python analysis/prepare_manuscript_revision.py
+python analysis/run_publication.py --compile-only
+python paper/submission/package_submission.py
+```
+
+The attached source is preserved under `paper/source/`. The literature review is unchanged; the main text is approximately 97% of its original length and the integrated document is almost exactly the original length. `editorial_revision_checks.json` records these comparisons and verifies that the saved statistical results are unchanged. Original corpus descriptions, descriptive tables and network figures remain supplied source assets; this does not imply regeneration from access-controlled platform records.
 
 `analysis/qa_submission.py` extracts and checks PDF text and renders pages with Poppler. `create_highlights.py` creates the editable highlights using python-docx. The highlights were visually checked using Microsoft Word's PDF export because the packaged LibreOffice renderer was unavailable on this host.
 

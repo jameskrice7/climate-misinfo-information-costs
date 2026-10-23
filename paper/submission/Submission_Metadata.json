@@ -1,7 +1,7 @@
 {
   "journal": "Energy Economics",
   "article_type": "Research article",
-  "title": "Climate misinformation and quoted liquidity in energy equities",
+  "title": "The Information Costs of Climate Misinformation: Evidence from Global Financial Data",
   "author": {
     "given_name": "James",
     "family_name": "Rice",
@@ -9,14 +9,15 @@
     "email": "ricejames0@gmail.com",
     "orcid": "0000-0001-9961-3461"
   },
-  "abstract": "Does climate misinformation predict trading costs in energy equities? This paper combines a sector-specific content index from 217,954 English-language Facebook posts with daily financial data. The principal sample contains 485,800 observations on 202 securities in nine energy sub-industries during January 2012–October 2025. A fixed language-model rubric scores misinformation and sector relevance separately. Positive spread associations under monthly controls change sign when market-by-date and sector-by-month fixed effects are included on a common sample. The principal specification uses prior-session financial controls and yields a coefficient of -0.0014 percentage points per index point (approximate 95% sector/date-clustered interval [-0.0065, 0.0036]). A sample-standard-deviation difference in content corresponds to -0.102 basis points in spread, with an interval of [-0.462, 0.258]. Alternative inference and timing checks do not establish a stable positive liquidity-cost association. The observational design, nine sector clusters, unvalidated classifier accuracy, and absence of observed investor exposure limit interpretation. The findings show why sector-level content measures require local market controls and explicit measurement checks before being interpreted as the financial costs of climate misinformation.",
-  "abstract_words": 169,
+  "abstract": "Climate misinformation can alter the information environment in which investors and liquidity providers trade. This paper examines that relationship in a panel of 204 listed climate-transition securities, using sector-specific exposure constructed from 217,954 English-language Facebook climate posts classified against nine energy sub-industries. Greater exposure is positively associated with quoted bid–ask spreads under monthly and local market-day controls. On a common sample of 486,655 security-days, the market-day estimate is +0.0129 percentage points per index point (p=0.033 under sector/date clustering), a pattern consistent with information-verification costs. The association changes sign and is imprecise after sector-month conditions are absorbed; with prior-session financial controls, the estimate is -0.0014 (p=0.533). Timing and alternative-outcome checks do not establish an additional robust response. The findings connect the political production of climate misinformation to the trading environment of energy equities while locating the positive spread association in shared sector conditions. The contribution is a sector-sensitive measure and a transparent account of where the liquidity association is observed, rather than a causal estimate of misinformation costs.",
+  "abstract_words": 167,
   "keywords": [
-    "Climate misinformation",
-    "Energy finance",
-    "Quoted liquidity",
-    "Information quality",
-    "Social media"
+    "Climate Misinformation",
+    "Information Asymmetry",
+    "Market Microstructure",
+    "Environmental Communication",
+    "Politics and Governance",
+    "Corporate Responsibility"
   ],
   "jel": [
     "G12",

@@ -33,5 +33,8 @@ paper/submission/source/*.out
 paper/submission/source/*.blg
 paper/submission/source/*.toc
 paper/submission/source/*.synctex.gz
+paper/submission/source/*.bcf
+paper/submission/source/*.run.xml
+paper/submission/source/compile_*.txt
 paper/submission/source/*.pdf
 paper/submission/qa/

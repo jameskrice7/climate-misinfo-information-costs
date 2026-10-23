@@ -1,8 +1,10 @@
-# Climate misinformation and quoted liquidity in energy equities
+# The Information Costs of Climate Misinformation
+
+Evidence from Global Financial Data
 
 James Rice, University of Essex. Prepared for Energy Economics, 23 October 2026.
 
-The paper asks whether sector-assessed climate misinformation has a stable association with quoted trading costs in energy equities. The principal estimate, after market-day and sector-month controls, does not establish a positive spread association. These are observational estimates with nine sector-level information series, rather than identified causal information costs.
+The paper connects politically produced climate misinformation to quoted liquidity in energy equities. Positive spread associations are observed under monthly and local market-day controls; the association changes sign and is imprecise after sector-month conditions are absorbed. These conditional findings are reported together. The attached manuscript's literature review, theoretical structure, APA6 formatting and integrated descriptive appendix are preserved, with targeted empirical corrections using the completed saved estimates.
 
 ## Paper and submission
 
@@ -23,7 +25,17 @@ python -m pip install -r requirements-publication.txt
 python analysis/run_publication.py --compile
 ```
 
-The command audits the inputs, fits all 37 specifications, creates a blank human-annotation sample, generates every submitted regression table and figure, runs substantive checks, and compiles the PDFs. It does not execute classification. Omit `--compile` to regenerate analysis and figure/table assets without LaTeX. PDF compilation requires `pdflatex` and `bibtex`. Financial-model runtime on the Windows preparation machine was approximately 18 minutes.
+The command audits the inputs, fits all 37 specifications, creates a blank human-annotation sample, generates financial robustness assets, applies the targeted manuscript revision and compiles PDFs. It does not execute classification. Omit `--compile` to regenerate analysis and assets without LaTeX. PDF compilation requires `pdflatex` and `biber` for the original APA6 bibliography. Financial-model runtime on the Windows preparation machine was approximately 18 minutes.
+
+To revise or compile the manuscript using the already completed analysis, without loading financial data or fitting any model:
+
+```sh
+python analysis/prepare_manuscript_revision.py
+python analysis/run_publication.py --compile-only
+python paper/submission/package_submission.py
+```
+
+The unchanged attachment is retained under `paper/source/`. The editorial script preserves the literature review exactly, restores the original layout and reports the before/after word counts and unchanged saved-results hash in `paper/submission/editorial_revision_checks.json`. Source-supplied financial assembly tables, corpus descriptions and owner-network figures are retained as documented inputs; their presence does not imply they were regenerated from access-controlled platform records.
 
 The analysis stack is pinned in `requirements.txt`; publication QA requirements are in `requirements-publication.txt`. `analysis/qa_submission.py` uses Poppler to check PDF text and render final pages. Editable highlights are created by `paper/submission/create_highlights.py` using python-docx; their content is also available as plain text.
 

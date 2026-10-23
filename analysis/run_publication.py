@@ -15,15 +15,19 @@ def main():
     args=ap.parse_args()
     if not args.compile_only:
         for name in ['audit_publication.py','publication_analysis.py','make_validation_sample.py',
-                     'build_publication.py','test_publication.py']:
+                     'build_publication.py','prepare_manuscript_revision.py','test_publication.py']:
             subprocess.run([sys.executable,str(ROOT/'analysis'/name)],cwd=ROOT,check=True)
     if args.compile or args.compile_only:
         src=ROOT/'paper/submission/source'
         for name in ['main','supplement','title_page','cover_letter','declaration','author_manuscript']:
-            for iteration in range(3):
+            biblatex=name in ['main','author_manuscript']
+            bbl=src/(name+'.bbl')
+            if biblatex and bbl.exists() and '\\begin{thebibliography}' in bbl.read_text(encoding='utf-8'):
+                bbl.unlink()
+            for iteration in range(4):
                 subprocess.run(['pdflatex','-interaction=nonstopmode','-halt-on-error',name+'.tex'],cwd=src,check=True)
                 if iteration==0 and name in ['main','author_manuscript']:
-                    subprocess.run(['bibtex',name],cwd=src,check=True)
+                    subprocess.run(['biber',name],cwd=src,check=True)
         import shutil
         names={'main':'Manuscript_Anonymous','supplement':'Supplement_Anonymous',
                'title_page':'Title_Page','cover_letter':'Cover_Letter','declaration':'Competing_Interests'}
