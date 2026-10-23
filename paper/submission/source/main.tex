@@ -1,0 +1,165 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype,amsmath,amssymb,graphicx,booktabs,array,tabularx,longtable}
+\usepackage[authoryear,round]{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{setspace,placeins}
+\setstretch{1.3}
+\setlength{\emergencystretch}{2em}
+\graphicspath{{figures/}}
+\title{Climate misinformation and quoted liquidity in energy equities}
+\ifdefined\AuthorVersion
+\author{James Rice\\\small Department of Government, University of Essex\\\small ricejames0@gmail.com}
+\else
+\author{}
+\fi
+\date{}
+\begin{document}
+\maketitle
+\vspace{-2em}
+\begin{abstract}
+\input{generated/abstract.tex}
+\end{abstract}
+\noindent\textbf{Keywords:} Climate misinformation; Energy finance; Quoted liquidity; Information quality; Social media.\\
+\textbf{JEL classification:} G12; G14; Q40; Q54.
+\clearpage
+
+\section{Introduction}
+Energy equities are valued in an information environment in which claims about climate science, fossil-fuel demand, and low-carbon technologies are frequently contested. Their cash flows depend on investment decisions and policy commitments with long horizons, while trading takes place continuously on much shorter horizons. Misleading climate claims could therefore affect the costs of trading even when their consequences for expected cash flows are uncertain. This paper asks whether sector-specific climate misinformation is associated with quoted bid--ask spreads in energy equities, and whether that association survives controls for daily market conditions and sector-level changes over time.
+
+The question differs from whether investors price carbon exposure or hedge climate news. Evidence on carbon risk and climate-news hedging establishes the financial relevance of climate information \citep{bolton2021climate,engle2020hedging}. It does not establish that inaccurate social-media content has a distinct liquidity consequence. A deterioration in information quality may widen spreads if traders differ in their ability to verify claims. Alternatively, additional uninformed participation may make order flow less informative and reduce adverse-selection costs. Climate misinformation can also coincide with policy announcements, changes in energy prices, or shifts in investor attention that independently affect spreads. Separating these possibilities requires both an explicit measurement design and a demanding comparison of observational specifications.
+
+The analysis combines a panel of energy securities with classifications of English-language Facebook climate posts. A fixed language-model rubric assigns each post a climate-or-energy misinformation score and a relevance score for each of nine energy sub-industries. Their product measures sector-relevant misinformation content. Aggregation produces sector-day content indices that are assigned to securities according to sub-industry. This construction provides cross-sector variation within a date, but does not measure whether an investor actually saw, believed, or traded on a post.
+
+The empirical contribution is to distinguish the association obtained from security and calendar-month fixed effects from the association identified after absorbing local market-day conditions and sector-month conditions. The nested comparison uses the same securities, dates, controls, and outcome treatment. The principal specification additionally uses controls measured at the previous observed active trading session, avoiding conditioning directly on current trading activity. Inference reflects the sector-level assignment of the content index, rather than treating the number of security-day observations as the number of independent information shocks.
+
+\input{generated/introduction_results.tex}
+
+The paper contributes to research on information quality and liquidity \citep{GlostenMilgrom1985,GrossmanStiglitz1980,LeuzVerrecchia2000}, digital misinformation in financial markets \citep{HerzingMuck2025}, and energy finance. Its substantive finding concerns the limits of interpreting social-media content measures as security-level financial exposure. The analysis identifies which component of the positive monthly association is robust to a more local comparison, quantifies the remaining uncertainty, and makes the market mapping, measurement identities, sample construction, and specification choices reproducible. The results concern quoted liquidity in the observed energy-equity sample. They do not identify a causal effect of misinformation on investment, financing costs, or the energy transition.
+
+\section{Information quality and competing liquidity predictions}
+\label{sec:theory}
+Financial information can affect transaction costs through its distribution across traders, as well as through its average accuracy. In the sequential-trade setting of \citet{GlostenMilgrom1985}, liquidity providers protect themselves against trading with better-informed counterparties by adjusting quotes. If verification of contested climate claims is costly, sophisticated investors may have an informational advantage. That mechanism predicts a positive association between misleading content and quoted spreads, conditional on other determinants of trading costs.
+
+An alternative prediction follows from changes in participation. Attention-grabbing content can affect which securities individual investors consider \citep{barber2008all}. If climate misinformation primarily attracts traders with little private information, the informed fraction of order flow may decline. The adverse-selection component of the spread could then fall. Inventory risk, competition among liquidity suppliers, and volatility may nevertheless offset this effect. A negative spread association would consequently be compatible with a participation channel without uniquely establishing it.
+
+These predictions are conditional. The arrival of a climate-policy announcement may simultaneously stimulate misleading commentary and increase genuine valuation uncertainty. Energy-price movements can have different consequences for coal, integrated producers, services firms, and renewable-energy firms. Such changes can create a positive association even if the misleading content has no independent influence on trading. Conversely, measurement error or a mismatch between the language of the corpus and the information used by local investors may attenuate an association.
+
+Accordingly, the empirical question is whether a directionally stable spread association remains after increasingly local controls for market conditions. A positive coefficient is consistent with, but does not identify, an information-asymmetry channel. A negative coefficient is consistent with several trading-composition mechanisms. An imprecise coefficient cannot establish either mechanism or demonstrate the absence of all misinformation effects. Quoted spreads alone cannot distinguish adverse selection from the other components of trading costs.
+
+Climate misinformation also differs from an indicator of general climate discussion. Climate denial and misleading energy claims are part of a broader public information environment \citep{farrell2016network,VosoughiRoyAral2018}. A high volume of relevant, accurate discussion need not imply poor information quality. The analysis therefore considers the misinformation and relevance components separately and assesses whether controlling for the number of posts and their average relevance changes the spread coefficient. These are within-classifier checks: they cannot replace an external benchmark for the accuracy of the classifications.
+
+\section{Data and measurement}
+\label{sec:data}
+\subsection{Financial observations and market assignment}
+The financial input contains 726,890 security-day records for 204 listed securities representing 198 distinct company names, from January 2012 to December 2025. Securities belong to nine TRBC sub-industries: Coal; Integrated Oil \& Gas; Oil \& Gas Drilling; Oil \& Gas Exploration and Production; Oil \& Gas Refining and Marketing; Oil \& Gas Transportation Services; Oil Related Services and Equipment; Renewable Energy Equipment \& Services; and Renewable Fuels. Multiple listings and share classes are retained as separate securities; they are not described as independent firms.
+
+Listing markets are assigned using the exchange suffix of the Refinitiv instrument code. Headquarters country is not substituted for listing market. The input spans mainland China, Hong Kong, Taiwan, Japan, Indonesia, Malaysia, Brazil, the United States, the United Kingdom, France, Germany, and the Netherlands. The mapping and a security-level crosswalk are provided in the replication materials. This matters for daily fixed effects because contemporaneous local trading conditions are shared by securities listed in the same market. Table~\ref{tab:markets} reports the composition of the estimation sample.
+
+The outcome is the percentage quoted spread,
+\begin{equation}
+ S_{it}=100\frac{A_{it}-B_{it}}{(A_{it}+B_{it})/2},
+\label{eq:spread}
+\end{equation}
+where $A_{it}$ and $B_{it}$ are the supplied daily ask and bid quotes. This identity is verified against every nonmissing spread in the financial input. The measure is a daily quoted transaction-cost proxy; it is not an effective spread computed from individual trades. The data do not establish whether the daily bid and ask are simultaneous intraday snapshots. Crossed quotes, nonpositive bids and spreads, nonpositive volume, and nonpositive closing prices are excluded from the estimation sample.
+
+Financial controls are log one plus volume, log market capitalization, and the daily high--low range as a percentage of the closing price. The principal specification measures each at the previous observed session with positive volume and a positive close. Using prior-session controls reduces direct conditioning on trading activity that could itself respond to current information. It does not make the exposure exogenous. Security fixed effects absorb persistent differences, including currency units in logged capitalization; market-day fixed effects absorb common local conditions, including exchange-rate movements shared by listings in that market.
+
+The daily financial input also includes VWAP and a variable equal to $\mathrm{VWAP}_{it}-(A_{it}+B_{it})/2$. The absolute value of this gap divided by the midpoint, in percent, is used only as a supplementary price-dispersion outcome. Neither the signed gap nor its percentage transformation measures signed order flow or per-dollar transaction price impact. Consequently, no joint spread/price-impact mechanism test is claimed. The identities and their verification are documented in the supplement.
+
+\subsection{Climate content and the fixed classification rubric}
+The content input comprises 217,954 distinct English-language public Facebook posts with valid classifications, drawn from a keyword-selected Meta Content Library corpus. The searches cover climate adaptation, politics, justice, resilience, activism, and ecological themes. The corpus is a sample of available public content, rather than a representative sample of Facebook users or investor information consumption. Posting-country and audience-country exposure are not identified by the distributed analysis data.
+
+The source research received institutional ethics approval for the Meta Content Library analysis. Raw post text and identifying platform metadata are subject to the source-access conditions.
+
+The classifier is Qwen3.6-35B-A3B-FP8, used with temperature zero and structured JSON output. Each judgment receives the post and a sub-industry profile containing its activities, example companies, and geographies. The rubric requests a relevance score $R_{ps}$ and a climate-or-energy misinformation score $M_{ps}$ on 0--100 scales. Relevance concerns material connections to sub-industry $s$. Misinformation concerns the truthfulness of the post's climate and energy claims. The rubric explicitly excludes unrelated political falsehoods and instructs the classifier to distinguish sincere assertions from satire or quoted denial that is being refuted. Inputs and truncation limits, the complete prompt, and the output schema are documented in the supplement and repository.
+
+There are 1,959,707 attempted post--sub-industry judgments, of which 398 have invalid outputs and are excluded from aggregation. These counts are not an exact ninefold Cartesian product for every post. All analyses use the persisted scores; no score is changed in response to a financial outcome. The product identity below holds for every valid judgment.
+
+The rubric-development assessment inspected the first 2,000 judgments to identify errors concerning satire and unrelated political claims. This is a development check, not an independent held-out evaluation of classifier accuracy. The analysis therefore treats the output as a model-assessed content measure. It does not claim human-level accuracy, external precision or recall, or a validated measure of intentional deception. An independent annotated sample would be needed to quantify those properties \citep{gilardi2023chatgpt}. Cross-sector agreement of a model's own scores is reported as an internal consistency diagnostic, without treating agreement as evidence of truth.
+
+\subsection{Sector-day content index and temporal support}
+For each valid post--sector judgment, define
+\begin{equation}
+ e_{ps}=\frac{R_{ps}M_{ps}}{100},\qquad
+ E_{st}=\frac{1}{n_{st}}\sum_{p\in\mathcal P_{st}}e_{ps}.
+\label{eq:index}
+\end{equation}
+Here $\mathcal P_{st}$ contains the day's posts with a valid score for sector $s$, and $n_{st}$ is its size. Missing classifications are excluded, rather than assigned zero. The security-day regressor is $E_{s(i)t}$: two securities in the same sub-industry receive the same daily value, apart from numerical rounding. It measures the average intensity of sector-relevant misinformation in available content. It is not a count of people exposed, an engagement-weighted audience measure, or a firm-specific treatment.
+
+The temporal support of the saved content series is 3 January 2012 through 13 October 2025. Financial records outside that interval are excluded rather than interpreted as days without misinformation. Within the supported interval, an unmatched date is coded as no matched content and assigned zero. A matched-post-only sensitivity excludes these zero-content dates. This convention distinguishes an observed window without a matching post from dates outside the available content window, although it cannot distinguish true content absence from incomplete corpus collection.
+
+Alternative regressors include log one plus the sum of post-level products, average misinformation, average relevance, the share of valid scores with misinformation at least 25, and an indicator for positive composite content. The threshold of 25 is an ordinal rubric cut-off, not a calibrated probability of a false claim. A volume control and average relevance are also included jointly with the composite. No alternative is selected because of its statistical significance.
+
+\input{generated/sample_text.tex}
+\input{tables/markets.tex}
+
+\section{Empirical design and inference}
+\label{sec:design}
+The principal model is
+\begin{equation}
+ S_{it}=\beta E_{s(i)t}+\gamma'X_{i,t^-}
+       +\alpha_i+\lambda_{m(i),t}+\mu_{s(i),q(t)}+u_{it},
+\label{eq:main}
+\end{equation}
+where $t^-$ is the previous observed active session for security $i$, $q(t)$ denotes calendar year-month, and $m(i)$ is listing market. Security fixed effects absorb persistent security characteristics. Market-by-date effects absorb daily shocks common to local listings. Sector-by-month effects absorb monthly changes shared by securities in the same energy sub-industry. Identification comes from sector-specific daily deviations within these market-day and sector-month comparisons, conditional on prior-session characteristics. Market-days containing only one observed security have no identifying variation after the market-day effect is absorbed.
+
+The model intentionally does not absorb sector-by-date effects: they would absorb the content index completely. This algebraic constraint defines the main identification limitation. Daily sector-specific news, energy-price responses, or policy developments can still be correlated with $E_{st}$ and $u_{it}$. Market-day and sector-month effects are stronger controls than a common month effect, but do not supply an instrument or a natural experiment.
+
+To show how the coefficient changes, a nested comparison holds the estimation sample and contemporaneous controls fixed while replacing security and month effects with security and date effects, then market-day effects, and finally sector-month effects. The principal model replaces contemporaneous activity controls with prior-session controls. It is consequently reported separately from the strictly nested comparison. Current trading volume could be a mediator; comparing these control choices is more informative than assuming that one interpretation is identified.
+
+The outcome and included continuous financial controls are winsorized at the first and ninety-ninth percentiles within the specified complete-case sample. Content scores are not winsorized. Nested fixed-effect comparisons use the same tail caps. Unwinsorized and log-spread specifications assess whether extreme spreads drive the conclusion. Leave-one-sector-out and leave-one-market-out diagnostics keep the principal sample's tail caps fixed, avoiding an additional change in the estimand from re-estimating cut-offs.
+
+Standard errors are clustered by sub-industry and calendar date. The first dimension permits dependence across different securities in the same sector over time; the second permits dependence across sectors observed on the same date. There are only nine sector clusters. Reported confidence intervals use a $t$ reference distribution with eight degrees of freedom, and are approximate rather than a guarantee of reliable finite-sample size \citep{Petersen2009,CameronMiller2015,MacKinnonNielsenWebb2023}. Security/date-clustered estimates are reported alongside them to show the consequence of clustering at the assignment level.
+
+Two additional inference diagnostics use different assumptions. A date-score heteroskedasticity-and-autocorrelation-consistent covariance aggregates regression influence contributions across securities within each observed date and uses Bartlett weights with bandwidths of 5, 20, and 60 observed dates. This permits contemporaneous cross-sectional dependence and finite-lag serial dependence, relying on a long time dimension \citep{DriscollKraay1998}. An enumerated sector score-sign diagnostic uses all $2^9$ sign combinations of null-imposed, nuisance-residualized sector scores. It requires independent, symmetric sector scores and is reported only as a sensitivity check, not as exact randomization inference or an exact wild-cluster bootstrap test. Agreement across these approaches can strengthen a descriptive inference but does not resolve omitted-variable bias.
+
+Timing checks distinguish the previous calendar day from the previous observed active session. The session grid is constructed before complete-case selection on the outcome. Gaps exceeding ten calendar days are excluded from the session-lag definition, so long suspensions are not treated as a single day's information response. Leads and lags are compared on a common sample; the lead is a falsification diagnostic for timing specificity, not a causal test. Posting timestamps are not aligned to each exchange's close, so neither same-date matching nor a lag establishes that the measured content arrived before a particular quote.
+
+\section{Results}
+\label{sec:results}
+\input{generated/results_text.tex}
+\FloatBarrier
+\input{tables/fixed_effects.tex}
+\input{tables/primary.tex}
+\FloatBarrier
+\begin{figure}[htbp]
+\centering\includegraphics[width=.96\linewidth]{specification_comparison.pdf}
+\caption{Content--spread coefficients across nested fixed-effect specifications and the principal model. The first four estimates share the same complete-case sample and contemporaneous controls; the principal model uses prior-session controls. Bars show approximate 95\% sector/date-clustered intervals using eight degrees of freedom. Source: reproducible Python analysis of the fixed financial and content inputs.}
+\label{fig:specifications}
+\end{figure}
+\input{tables/timing.tex}
+\FloatBarrier
+
+\section{Interpretation, limitations, and implications for energy finance}
+\label{sec:discussion}
+The specification comparison changes what can be inferred about climate misinformation and trading costs. A positive coefficient under monthly controls is compatible with information verification costs, but also with sector-level valuation conditions evolving within the energy transition. The inclusion of sector-month effects removes one class of shared variation while market-day effects account for local conditions. The remaining association is a more local descriptive object. It should not be interpreted as a corrected causal estimate of a quantity that the monthly model consistently identified.
+
+This distinction has an economic consequence. A content index can be relevant to the energy information environment without providing a stable security-level liquidity signal. The daily sector score is common to securities across very different listing markets. Its variation cannot reveal which investors encountered the content or how they interpreted it. The English-language restriction is especially consequential in a sample containing many mainland Chinese and Indonesian listings. Estimated associations may reflect a common international narrative, a proxy for sector news, or a mismatch between available English content and local information. The available data cannot distinguish those explanations.
+
+The evidence also limits mechanism claims. Quoted spread changes can result from adverse selection, inventory costs, volatility, or liquidity-supplier competition. The VWAP-midquote gap is a price-dispersion measure and does not recover the response of prices to signed trades. Without transaction-level order direction, quote timing, depth, or investor holdings and flows, the paper cannot identify a participation channel or a verification advantage among sophisticated investors \citep{Hasbrouck1991}. The supplementary gap regression is therefore an alternative-outcome description, not a validation of a particular microstructure model.
+
+Measurement uncertainty remains substantial. Development checks improved the rubric's handling of satire and unrelated falsehoods, but do not supply an independent estimate of classification error. Conditional means based on relevance thresholds change the composition and denominator of the content measure. In particular, zero-filling an empty high-relevance subset conflates the absence of qualifying content with an observed subset mean of zero. A meaningful threshold robustness exercise should retain a common sample, distinguish missing subset means from zero contributions, and compare both conditional means and contributions to the same all-post denominator. The supplement sets out this decomposition and the code implements it when an authorized post-date crosswalk is available. No claim of a successful irrelevant-content placebo is made.
+
+Sampling and market-data restrictions further bound external validity. The financial sample is supplied as a set of listed energy securities, with uneven coverage and a small number of issuers represented by multiple securities. Its construction does not establish a random sample or a survivor-bias-free universe. The paper does not extrapolate to unlisted transition projects, bonds, investment funds, or the financing costs of new energy infrastructure. Missing bids, asks, controls, and post support also determine the estimation sample. The supplement reports these filters explicitly.
+
+For energy-finance research, the practical implication is to align the interpretation of content data with their actual assignment level and temporal coverage. Daily market controls and slowly varying sector controls answer different confounding concerns. Neither can be replaced by clustering standard errors, since fixed effects change the identifying comparison whereas clustering changes uncertainty around that comparison. Equally, a large security-day panel cannot compensate for a small number of sector-level information series. These points are central to interpreting machine-generated measures of the energy information environment.
+
+For policy, the results do not quantify a reduction in financing costs from correcting misinformation or justify a particular platform intervention. Such claims would require evidence linking an exogenous change in information quality to investor exposure and subsequent trading. Useful extensions include independent multilingual annotations, a documented post-to-market timing crosswalk, and a setting in which information corrections or platform changes have a defensible comparison group. The present evidence provides a reproducible benchmark for designing those tests.
+
+\section{Conclusion}
+Climate misinformation is a plausible source of information costs in energy markets, but its financial consequences cannot be inferred from topical relevance alone. This paper links sector-assessed climate content to daily quoted spreads and examines how the association changes with the comparison used for identification. A positive monthly association does not translate into a stable positive coefficient after local market-day and sector-month conditions are absorbed. The principal estimates do not establish that misinformation widens quoted spreads, and they do not establish an effect of exactly zero. Their contribution is to delimit the evidence, make the measurement and inference choices transparent, and identify what additional information is needed to test a causal liquidity channel.
+
+\section*{Data availability}
+The financial analysis, score audits, tables, and figures are generated from the fixed inputs and documented scripts in the accompanying replication package. Financial observations originate from licensed Refinitiv data; raw Meta Content Library records and post text are access-controlled. The supplementary material specifies which components can be reproduced from the distributed inputs and which require authorized source access. An author-identified repository link is supplied separately with the title page.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+OpenAI Codex (GPT-6) was used to assist with analysis-code development, reproducible data visualization, and manuscript organization and language. Statistical estimates and figures are generated by the documented Python computations from the fixed inputs. The language-model content classification is a research method described in Section~\ref{sec:data} and the supplement. Responsibility for scientific interpretation, verification, and submission rests with the author.
+
+\setstretch{1.0}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

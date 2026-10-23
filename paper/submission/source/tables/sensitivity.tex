@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering
+\caption{Outcome, sample, and timing sensitivity}
+\label{tab:sensitivity}
+\begin{minipage}{\linewidth}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.40\linewidth}rrrr}
+\toprule
+Specification & Coefficient & SE & $p$ & N \\
+\midrule
+No financial controls & -0.0012 & 0.0017 & 0.492 & 485,800 \\
+Unwinsorized spread and controls & -0.0086 & 0.0048 & 0.109 & 485,800 \\
+Log spread & 0.0035 & 0.0020 & 0.122 & 485,800 \\
+Matched-post dates only & -0.0014 & 0.0022 & 0.556 & 485,332 \\
+Previous-session content & -0.0010 & 0.0022 & 0.652 & 485,759 \\
+VWAP-midpoint percentage gap & 0.0010 & 0.0033 & 0.760 & 485,798 \\
+\bottomrule
+\end{tabular}
+\par\vspace{0.5em}\footnotesize Unless stated otherwise the outcome is a percentage-point spread. Log spread and the VWAP gap have different units/interpretations. No gap outcome is interpreted as transaction price impact. Sector/date inference.
+\end{minipage}
+\end{table}

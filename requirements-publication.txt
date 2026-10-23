@@ -1,0 +1,4 @@
+-r requirements.txt
+# PDF extraction and artifact QA; analysis itself uses the pinned core stack.
+pypdf==6.21.2
+pillow==13.0.0

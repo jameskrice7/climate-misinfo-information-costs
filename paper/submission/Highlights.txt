@@ -1,0 +1,5 @@
+- Climate content is linked to quoted spreads across nine energy sub-industries.
+- Market-day and sector-month controls change the positive monthly association.
+- The principal estimate does not establish a positive spread association.
+- Inference accounts for sector-level content and common daily trading conditions.
+- Content availability and investor exposure remain distinct economic concepts.

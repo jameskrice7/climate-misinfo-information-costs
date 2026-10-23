@@ -24,3 +24,14 @@ energy_panel_posts.parquet
 # OS
 .DS_Store
 Thumbs.db
+
+# Local publication computation and TeX build intermediates
+results/publication/analysis_sample.parquet
+paper/submission/source/*.aux
+paper/submission/source/*.log
+paper/submission/source/*.out
+paper/submission/source/*.blg
+paper/submission/source/*.toc
+paper/submission/source/*.synctex.gz
+paper/submission/source/*.pdf
+paper/submission/qa/

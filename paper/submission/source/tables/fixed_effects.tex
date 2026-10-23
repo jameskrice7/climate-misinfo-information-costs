@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\caption{Nested fixed-effect comparison on a common sample}
+\label{tab:fe}
+\begin{minipage}{\linewidth}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.49\linewidth}rrr}
+\toprule
+Fixed effects & Coefficient & SE & $p$ \\
+\midrule
+Security and month & 0.0041 & 0.0020 & 0.073 \\
+Security and date & 0.0145 & 0.0079 & 0.102 \\
+Security and market-day & 0.0129 & 0.0050 & 0.033 \\
+Security, market-day, sector-month & -0.0033 & 0.0019 & 0.117 \\
+\bottomrule
+\end{tabular}
+\par\vspace{0.5em}\footnotesize All models use 486,655 observations, the same contemporaneous controls and tail caps. The outcome is the quoted spread in percentage points. SE and reference probabilities cluster by sector and date (nine sectors).
+\end{minipage}
+\end{table}

@@ -1,0 +1,144 @@
+{
+  "panel_rows": 726890,
+  "securities": 204,
+  "company_names": 198,
+  "panel_min": "2012-01-02",
+  "panel_max": "2025-12-31",
+  "exposure_min": "2012-01-03",
+  "exposure_max": "2025-10-13",
+  "panel_rows_after_exposure_end": 11536,
+  "spread_observed_after_exposure_end": 6490,
+  "crossed_quotes": 3,
+  "nonpositive_spreads": 6,
+  "market_security_counts": {
+    "Mainland China": 83,
+    "Indonesia": 62,
+    "United States": 25,
+    "Taiwan": 12,
+    "Brazil": 8,
+    "Hong Kong": 5,
+    "Japan": 3,
+    "United Kingdom": 2,
+    "Malaysia": 1,
+    "France": 1,
+    "Netherlands": 1,
+    "Germany": 1
+  },
+  "region_market_crosswalk": [
+    {
+      "stored_region": "CN",
+      "listing_market": "Mainland China",
+      "securities": 83
+    },
+    {
+      "stored_region": "EU",
+      "listing_market": "France",
+      "securities": 1
+    },
+    {
+      "stored_region": "EU",
+      "listing_market": "Germany",
+      "securities": 1
+    },
+    {
+      "stored_region": "JP",
+      "listing_market": "Japan",
+      "securities": 3
+    },
+    {
+      "stored_region": "JP",
+      "listing_market": "Taiwan",
+      "securities": 12
+    },
+    {
+      "stored_region": "UK",
+      "listing_market": "United Kingdom",
+      "securities": 2
+    },
+    {
+      "stored_region": "US",
+      "listing_market": "Brazil",
+      "securities": 8
+    },
+    {
+      "stored_region": "US",
+      "listing_market": "Hong Kong",
+      "securities": 5
+    },
+    {
+      "stored_region": "US",
+      "listing_market": "Indonesia",
+      "securities": 62
+    },
+    {
+      "stored_region": "US",
+      "listing_market": "Malaysia",
+      "securities": 1
+    },
+    {
+      "stored_region": "US",
+      "listing_market": "Netherlands",
+      "securities": 1
+    },
+    {
+      "stored_region": "US",
+      "listing_market": "United States",
+      "securities": 25
+    }
+  ],
+  "spread_identity": {
+    "n": 504043,
+    "max_abs_error": 7.105427357601002e-15,
+    "fraction_close": 1.0
+  },
+  "priceimpact_vs_orderflow_mid": {
+    "n": 496622,
+    "max_abs_error": 1.4210854715202004e-14,
+    "fraction_close": 1.0
+  },
+  "priceimpact_vs_orderflow_close": {
+    "n": 472742,
+    "max_abs_error": 826.0583521345294,
+    "fraction_close": 0.019642849588147448
+  },
+  "priceimpact_vs_orderflow_vwap": {
+    "n": 496622,
+    "max_abs_error": 821.1282814585727,
+    "fraction_close": 0.0021948282597226863
+  },
+  "orderflow_vs_vwap_minus_mid": {
+    "n": 496622,
+    "max_abs_error": 0.0,
+    "fraction_close": 1.0
+  },
+  "orderflow_vs_vwap_minus_close": {
+    "n": 472742,
+    "max_abs_error": 261262.5,
+    "fraction_close": 0.016679288068333256
+  },
+  "intradayvolatility_vs_range": {
+    "n": 496614,
+    "max_abs_error": 121.13507193875147,
+    "fraction_close": 0.01632253621524967
+  },
+  "buyer_indicator_values": {
+    "0.0": 279644,
+    "1.0": 255446
+  },
+  "maximum_exposure_range_within_sector_date": 4.440892098500626e-16,
+  "sector_date_cells": 32347,
+  "exposure_nunique_dates": 3604,
+  "scores": {
+    "n": 1959707,
+    "posts": 217998,
+    "industries": 9,
+    "errors": 398,
+    "product_errors": 0
+  },
+  "misinformation_cross_sector_consistency": {
+    "n": 217954.0,
+    "mean_range": 1.1607311634565092,
+    "share_disagreement": 0.030299971553630584,
+    "share_crossing_50": 0.011897005790212615
+  }
+}

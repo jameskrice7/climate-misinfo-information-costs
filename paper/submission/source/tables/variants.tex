@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering
+\caption{Alternative content measures and attention adjustment}
+\label{tab:variants}
+\begin{minipage}{\linewidth}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.48\linewidth}rrr}
+\toprule
+Content regressor & Coefficient & SE & $p$ \\
+\midrule
+Mean composite & -0.0014 & 0.0022 & 0.533 \\
+Log of one plus composite sum & 0.0002 & 0.0010 & 0.820 \\
+Mean misinformation score & 0.0010 & 0.0013 & 0.470 \\
+Mean relevance score & -0.0002 & 0.0004 & 0.644 \\
+Share with misinformation at least 25 & 0.0338 & 0.0897 & 0.716 \\
+Positive composite indicator & -0.0036 & 0.0040 & 0.398 \\
+Composite with volume and relevance controls & -0.0013 & 0.0023 & 0.591 \\
+\bottomrule
+\end{tabular}
+\par\vspace{0.5em}\footnotesize Principal controls and fixed effects throughout. Regressor units differ across rows; raw coefficient sizes are not comparable. The final row adds log one plus post count and mean relevance jointly. Sector/date inference.
+\end{minipage}
+\end{table}

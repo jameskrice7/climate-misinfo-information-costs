@@ -1,0 +1,11 @@
+test_actual_listing_markets (__main__.PublicationChecks.test_actual_listing_markets) ... ok
+test_completed_results_and_fwl (__main__.PublicationChecks.test_completed_results_and_fwl) ... ok
+test_daily_spread_and_vwap_gap_identities (__main__.PublicationChecks.test_daily_spread_and_vwap_gap_identities) ... ok
+test_exposure_window_and_unique_keys (__main__.PublicationChecks.test_exposure_window_and_unique_keys) ... ok
+test_lag_uses_prior_observed_session_including_weekends (__main__.PublicationChecks.test_lag_uses_prior_observed_session_including_weekends) ... ok
+test_sector_level_exposure (__main__.PublicationChecks.test_sector_level_exposure) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 6.644s
+
+OK

@@ -1,21 +1,20 @@
 cff-version: 1.2.0
 message: "If you use these replication materials, please cite the paper."
 title: >-
-  Replication materials — The Information Costs of Climate Misinformation:
-  Evidence from Global Financial Data
+  Replication materials — Climate misinformation and quoted liquidity in energy equities
 abstract: >-
-  Replication code and derived data for a study of whether firm-day exposure
-  to sector-specific climate misinformation moves the trading costs of 204
-  listed climate-transition firms (2012-2025). Exposure is built from
-  1,959,707 judgments by Qwen3.6-35B-A3B-FP8, which scored 217,954 Facebook
-  climate posts for relevance to each of nine TRBC energy sub-industries and
-  for climate-or-energy misinformation.
+  Replication code, fixed classification scores, input audits and submission
+  materials for a study of climate content and quoted liquidity in energy
+  equities. The principal model uses 485800 security-days on 202 securities,
+  market-day and sector-month fixed effects, prior-session controls and
+  sector/date inference. The daily content index is built from fixed
+  classifications of 217954 English-language Facebook posts.
 authors:
   - family-names: Rice
     given-names: James K.
     affiliation: University of Essex
-version: "2.0.0"
-date-released: "2026-09-30"
+version: "3.0.0"
+date-released: "2026-10-23"
 license: MIT
 keywords:
   - climate misinformation

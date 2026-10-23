@@ -1,0 +1,110 @@
+\begin{thebibliography}{15}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Barber and Odean(2008)]{barber2008all}
+Brad~M. Barber and Terrance Odean.
+\newblock All that glitters: The effect of attention and news on the buying
+  behavior of individual and institutional investors.
+\newblock \emph{Review of Financial Studies}, 21\penalty0 (2):\penalty0
+  785--818, 2008.
+\newblock \doi{10.1093/rfs/hhm079}.
+
+\bibitem[Bolton and Kacperczyk(2021)]{bolton2021climate}
+Patrick Bolton and Marcin Kacperczyk.
+\newblock Do investors care about carbon risk?
+\newblock \emph{Journal of Financial Economics}, 142\penalty0 (2):\penalty0
+  517--549, 2021.
+
+\bibitem[Cameron and Miller(2015)]{CameronMiller2015}
+A.~Colin Cameron and Douglas~L. Miller.
+\newblock A practitioner's guide to cluster-robust inference.
+\newblock \emph{Journal of Human Resources}, 50\penalty0 (2):\penalty0
+  317--372, 2015.
+\newblock \doi{10.3368/jhr.50.2.317}.
+
+\bibitem[Driscoll and Kraay(1998)]{DriscollKraay1998}
+John~C. Driscoll and Aart~C. Kraay.
+\newblock Consistent covariance matrix estimation with spatially dependent
+  panel data.
+\newblock \emph{The Review of Economics and Statistics}, 80\penalty0
+  (4):\penalty0 549--560, 1998.
+
+\bibitem[Engle et~al.(2020)Engle, Giglio, Kelly, Lee, and
+  Stroebel]{engle2020hedging}
+Robert~F. Engle, Stefano Giglio, Bryan Kelly, Heebum Lee, and Johannes
+  Stroebel.
+\newblock Hedging climate change news.
+\newblock \emph{Review of Financial Studies}, 33\penalty0 (3):\penalty0
+  1184--1216, 2020.
+
+\bibitem[Farrell(2016)]{farrell2016network}
+Justin Farrell.
+\newblock Network structure and influence of the climate change
+  counter-movement.
+\newblock \emph{Nature Climate Change}, 6\penalty0 (4):\penalty0 370--374,
+  2016.
+
+\bibitem[Gilardi et~al.(2023)Gilardi, Alizadeh, and Kubli]{gilardi2023chatgpt}
+Fabrizio Gilardi, Meysam Alizadeh, and Maël Kubli.
+\newblock Chatgpt outperforms crowd workers for text-annotation tasks.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 120\penalty0
+  (30):\penalty0 e2305016120, 2023.
+\newblock \doi{10.1073/pnas.2305016120}.
+
+\bibitem[Glosten and Milgrom(1985)]{GlostenMilgrom1985}
+Lawrence~R. Glosten and Paul~R. Milgrom.
+\newblock Bid, ask and transaction prices in a specialist market with
+  heterogeneously informed traders.
+\newblock \emph{Journal of Financial Economics}, 14\penalty0 (1):\penalty0
+  71--100, 1985.
+
+\bibitem[Grossman and Stiglitz(1980)]{GrossmanStiglitz1980}
+Sanford~J. Grossman and Joseph~E. Stiglitz.
+\newblock On the impossibility of informationally efficient markets.
+\newblock \emph{The American Economic Review}, 70\penalty0 (3):\penalty0
+  393--408, 1980.
+
+\bibitem[Hasbrouck(1991)]{Hasbrouck1991}
+Joel Hasbrouck.
+\newblock Measuring the information content of stock trades.
+\newblock \emph{The Journal of Finance}, 46\penalty0 (1):\penalty0 179--207,
+  1991.
+
+\bibitem[Herzing and Muck(2026)]{HerzingMuck2025}
+Tobias~J. Herzing and Matthias Muck.
+\newblock Can misinformation be tolerated?
+\newblock \emph{International Review of Financial Analysis}, 109:\penalty0
+  104768, 2026.
+\newblock \doi{10.1016/j.irfa.2025.104768}.
+
+\bibitem[Leuz and Verrecchia(2000)]{LeuzVerrecchia2000}
+Christian Leuz and Robert~E. Verrecchia.
+\newblock The economic consequences of increased disclosure.
+\newblock \emph{Journal of Accounting Research}, 38:\penalty0 91--124, 2000.
+
+\bibitem[MacKinnon et~al.(2023)MacKinnon, Nielsen, and
+  Webb]{MacKinnonNielsenWebb2023}
+James~G. MacKinnon, Morten~{\O}rregaard Nielsen, and Matthew~D. Webb.
+\newblock Cluster-robust inference: A guide to empirical practice.
+\newblock \emph{Journal of Econometrics}, 232\penalty0 (2):\penalty0 272--299,
+  2023.
+\newblock \doi{10.1016/j.jeconom.2022.04.001}.
+
+\bibitem[Petersen(2009)]{Petersen2009}
+Mitchell~A. Petersen.
+\newblock Estimating standard errors in finance panel data sets: Comparing
+  approaches.
+\newblock \emph{The Review of Financial Studies}, 22\penalty0 (1):\penalty0
+  435--480, 2009.
+\newblock \doi{10.1093/rfs/hhn053}.
+
+\bibitem[Vosoughi et~al.(2018)Vosoughi, Roy, and Aral]{VosoughiRoyAral2018}
+Soroush Vosoughi, Deb Roy, and Sinan Aral.
+\newblock The spread of true and false news online.
+\newblock \emph{Science}, 359\penalty0 (6380):\penalty0 1146--1151, 2018.
+
+\end{thebibliography}
